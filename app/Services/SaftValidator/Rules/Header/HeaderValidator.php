@@ -5,6 +5,13 @@ namespace App\Services\SaftValidator\Rules\Header;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the Header section of a SAFT-PT file against the v1.04_01 specification.
+ *
+ * Checks mandatory fields (CompanyID, NIF, FiscalYear, dates, currency),
+ * verifies the AuditFileVersion matches 1.04_01, validates the company's NIF
+ * using the mod-11 check digit algorithm, and ensures date ranges are consistent.
+ */
 class HeaderValidator extends BaseValidator
 {
     public function validate(): ValidationResult
@@ -205,6 +212,7 @@ class HeaderValidator extends BaseValidator
         }
     }
 
+    /** Map TaxAccountingBasis code to its Portuguese description. */
     protected function taxBasisDescription(string $basis): string
     {
         return match ($basis) {

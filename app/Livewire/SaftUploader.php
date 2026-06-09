@@ -2,41 +2,58 @@
 
 namespace App\Livewire;
 
-use App\Services\SaftValidator\SaftValidatorService;
+use App\Services\PlanoContasComparator;
 use App\Services\SaftValidator\SaftDataExtractor;
 use App\Services\SaftValidator\SaftExportService;
-use App\Services\PlanoContasComparator;
+use App\Services\SaftValidator\SaftValidatorService;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
+/**
+ * Main Livewire component for the SAFT-PT file upload and validation workflow.
+ *
+ * Handles the complete user journey: file upload, validation, data extraction,
+ * data browsing across multiple tabs, CSV/XML export, and optional Plano de Contas
+ * comparison. Temporary files are deleted immediately after processing for GDPR compliance.
+ */
 class SaftUploader extends Component
 {
     use WithFileUploads;
 
+    // ── Upload state ─────────────────────────────────────────────
     public $saftFile;
-    public ?array $result = null;
-    public ?array $summary = null;
-    public ?array $saftData = null;
     public bool $isValidating = false;
     public ?string $fileName = null;
     public ?string $errorMessage = null;
+    public string $saftType = 'billing';
+
+    // ── Validation results ───────────────────────────────────────
+    public ?array $result = null;
+    public ?array $summary = null;
+    public ?string $validationFilter = null;
+
+    // ── Extracted data & tab navigation ──────────────────────────
+    public ?array $saftData = null;
+    public bool $isAccountingSaft = false;
     public string $activeTab = 'validation';
     public string $activeDataTab = 'header';
+    public ?string $searchQuery = null;
+
+    // ── Expandable row toggles ───────────────────────────────────
     public ?string $expandedInvoice = null;
     public ?string $expandedPayment = null;
     public ?string $expandedTransaction = null;
-    public bool $isAccountingSaft = false;
-    public string $saftType = 'billing';
-    public ?string $searchQuery = null;
-    public ?string $validationFilter = null;
+
+    // ── Plano de Contas comparison ───────────────────────────────
     public $planoFile;
     public ?array $planoComparison = null;
     public ?string $planoFileName = null;
     public ?string $planoError = null;
     public string $planoFilter = 'all';
 
+    /** Triggered when the user selects a SAFT file. Validates file type and size. */
     public function updatedSaftFile(): void
     {
         $this->validate([
@@ -57,6 +74,7 @@ class SaftUploader extends Component
         $this->errorMessage = null;
     }
 
+    /** Run full validation and data extraction on the uploaded SAFT file. */
     public function validate_saft(): void
     {
         if (!$this->saftFile) {
@@ -94,6 +112,7 @@ class SaftUploader extends Component
         }
     }
 
+    /** Load and validate a bundled sample SAFT file for demonstration purposes. */
     public function loadSample(): void
     {
         $file = $this->saftType === 'accounting'
@@ -148,6 +167,7 @@ class SaftUploader extends Component
         $this->validationFilter = $this->validationFilter === $filter ? null : $filter;
     }
 
+    /** Reset the entire component state to allow a fresh upload. */
     public function resetUpload(): void
     {
         $this->cleanupTempFile();
@@ -194,6 +214,7 @@ class SaftUploader extends Component
         $this->expandedInvoice = $this->expandedInvoice === $invoiceNo ? null : $invoiceNo;
     }
 
+    /** Triggered when the user uploads a Plano de Contas file for comparison. */
     public function updatedPlanoFile(): void
     {
         $this->planoError = null;
@@ -251,6 +272,7 @@ class SaftUploader extends Component
         $this->expandedPayment = $this->expandedPayment === $paymentNo ? null : $paymentNo;
     }
 
+    /** Stream a single data section as a CSV download. */
     public function exportCsv(string $section): StreamedResponse
     {
         $baseName = pathinfo($this->fileName ?? 'saft', PATHINFO_FILENAME);
@@ -268,6 +290,7 @@ class SaftUploader extends Component
         ]);
     }
 
+    /** Stream a single data section as an XML download. */
     public function exportXml(string $section): StreamedResponse
     {
         $baseName = pathinfo($this->fileName ?? 'saft', PATHINFO_FILENAME);
@@ -299,6 +322,7 @@ class SaftUploader extends Component
         ]);
     }
 
+    /** Stream all data sections combined into a single CSV download. */
     public function exportAllCsv(): StreamedResponse
     {
         $baseName = pathinfo($this->fileName ?? 'saft', PATHINFO_FILENAME);

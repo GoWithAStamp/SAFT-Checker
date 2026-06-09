@@ -2,12 +2,25 @@
 
 namespace App\Services\SaftValidator;
 
+/**
+ * Extracts structured data from a parsed SAFT-PT XML file.
+ *
+ * Converts the XML tree into plain PHP arrays for each SAFT section
+ * (Header, Customers, Suppliers, Products, Tax Table, Invoices, Payments,
+ * Movements, Working Documents, General Ledger Accounts and Entries).
+ * The resulting arrays are suitable for display in data tables and CSV/XML export.
+ */
 class SaftDataExtractor
 {
     public function __construct(
         protected \SimpleXMLElement $xml,
     ) {}
 
+    /**
+     * Create an extractor instance from a file path.
+     *
+     * @throws \RuntimeException If the file cannot be loaded.
+     */
     public static function fromFile(string $filePath): self
     {
         $xml = simplexml_load_file($filePath);
@@ -17,6 +30,11 @@ class SaftDataExtractor
         return new self($xml);
     }
 
+    /**
+     * Extract all available data sections from the SAFT file.
+     *
+     * @return array<string, array> Keyed by section name (e.g., 'invoices', 'customers').
+     */
     public function extractAll(): array
     {
         $data = [
@@ -45,6 +63,7 @@ class SaftDataExtractor
         return in_array($taxBasis, ['C', 'I']);
     }
 
+    /** Extract company and file metadata from the Header element. */
     protected function extractHeader(): array
     {
         $h = $this->xml->Header;
@@ -78,6 +97,7 @@ class SaftDataExtractor
         ];
     }
 
+    /** Extract customer records from MasterFiles. */
     protected function extractCustomers(): array
     {
         $customers = [];
@@ -102,6 +122,7 @@ class SaftDataExtractor
         return $customers;
     }
 
+    /** Extract supplier records from MasterFiles. */
     protected function extractSuppliers(): array
     {
         $suppliers = [];
@@ -126,6 +147,7 @@ class SaftDataExtractor
         return $suppliers;
     }
 
+    /** Extract product/service catalog from MasterFiles. */
     protected function extractProducts(): array
     {
         $products = [];
@@ -144,6 +166,7 @@ class SaftDataExtractor
         return $products;
     }
 
+    /** Extract tax table entries (VAT rates and codes) from MasterFiles. */
     protected function extractTaxTable(): array
     {
         $entries = [];
@@ -164,6 +187,7 @@ class SaftDataExtractor
         return $entries;
     }
 
+    /** Extract sales invoices with their line items from SourceDocuments. */
     protected function extractInvoices(): array
     {
         $invoices = [];
@@ -209,6 +233,7 @@ class SaftDataExtractor
         return $invoices;
     }
 
+    /** Extract payment receipts with their line items from SourceDocuments. */
     protected function extractPayments(): array
     {
         $payments = [];
@@ -246,6 +271,7 @@ class SaftDataExtractor
         return $payments;
     }
 
+    /** Extract stock/transport movement documents from SourceDocuments. */
     protected function extractMovements(): array
     {
         $movements = [];
@@ -269,6 +295,7 @@ class SaftDataExtractor
         return $movements;
     }
 
+    /** Extract working documents (proformas, quotes, etc.) from SourceDocuments. */
     protected function extractWorkingDocuments(): array
     {
         $docs = [];
@@ -292,6 +319,7 @@ class SaftDataExtractor
         return $docs;
     }
 
+    /** Extract the chart of accounts (plano de contas) from MasterFiles. */
     protected function extractGeneralLedgerAccounts(): array
     {
         $accounts = [];
@@ -314,6 +342,7 @@ class SaftDataExtractor
         return $accounts;
     }
 
+    /** Extract accounting journal entries (transactions) from GeneralLedgerEntries. */
     protected function extractGeneralLedgerEntries(): array
     {
         $entries = [];

@@ -5,6 +5,14 @@ namespace App\Services\SaftValidator\Rules\SourceDocuments;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the MovementOfGoods section of a SAFT-PT file.
+ *
+ * Checks transport/stock movement documents (guias de transporte, guias de remessa)
+ * for duplicate document numbers, required dates, and shipping address presence.
+ * These documents are governed by Decreto-Lei 198/2012 and must be communicated
+ * to AT before goods are dispatched.
+ */
 class MovementOfGoodsValidator extends BaseValidator
 {
     public function validate(): ValidationResult

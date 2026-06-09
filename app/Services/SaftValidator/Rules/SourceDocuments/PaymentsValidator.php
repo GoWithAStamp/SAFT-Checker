@@ -5,6 +5,15 @@ namespace App\Services\SaftValidator\Rules\SourceDocuments;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the Payments section of a SAFT-PT file.
+ *
+ * Beyond structural checks (duplicates, statuses, dates, totals), this validator
+ * performs cross-referencing between payment lines and the SalesInvoices section.
+ * Each payment line's SourceDocumentID.OriginatingON is checked against the
+ * invoice map to verify: the referenced invoice exists, dates are consistent
+ * (payment cannot precede its invoice), and cancelled invoices are not referenced.
+ */
 class PaymentsValidator extends BaseValidator
 {
     public function validate(): ValidationResult

@@ -4,14 +4,22 @@ namespace App\Services\SaftValidator;
 
 use App\Services\SaftValidator\Parsers\SaftParser;
 use App\Services\SaftValidator\Rules\Header\HeaderValidator;
-use App\Services\SaftValidator\Rules\MasterFiles\MasterFilesValidator;
-use App\Services\SaftValidator\Rules\SourceDocuments\SalesInvoicesValidator;
-use App\Services\SaftValidator\Rules\SourceDocuments\PaymentsValidator;
-use App\Services\SaftValidator\Rules\SourceDocuments\MovementOfGoodsValidator;
-use App\Services\SaftValidator\Rules\SourceDocuments\WorkingDocumentsValidator;
 use App\Services\SaftValidator\Rules\MasterFiles\GeneralLedgerAccountsValidator;
+use App\Services\SaftValidator\Rules\MasterFiles\MasterFilesValidator;
 use App\Services\SaftValidator\Rules\SourceDocuments\GeneralLedgerEntriesValidator;
+use App\Services\SaftValidator\Rules\SourceDocuments\MovementOfGoodsValidator;
+use App\Services\SaftValidator\Rules\SourceDocuments\PaymentsValidator;
+use App\Services\SaftValidator\Rules\SourceDocuments\SalesInvoicesValidator;
+use App\Services\SaftValidator\Rules\SourceDocuments\WorkingDocumentsValidator;
 
+/**
+ * Main SAFT-PT validation orchestrator.
+ *
+ * Coordinates the full validation pipeline: XSD schema validation followed by
+ * business rule checks across all SAFT-PT sections (Header, MasterFiles,
+ * SourceDocuments, GeneralLedgerEntries). Each section is handled by a
+ * dedicated validator class.
+ */
 class SaftValidatorService
 {
     protected array $errors = [];
@@ -19,6 +27,16 @@ class SaftValidatorService
     protected array $info = [];
     protected ?\SimpleXMLElement $xml = null;
 
+    /**
+     * Validate a SAFT-PT file against schema and business rules.
+     *
+     * First performs XSD schema validation. If blocking errors are found
+     * (e.g., malformed XML), returns immediately. Otherwise, runs all
+     * section-specific validators and aggregates the results.
+     *
+     * @param string $filePath Absolute path to the SAFT-PT XML file.
+     * @return ValidationResult Aggregated errors, warnings, and info messages.
+     */
     public function validate(string $filePath): ValidationResult
     {
         $this->reset();
@@ -39,6 +57,11 @@ class SaftValidatorService
         );
     }
 
+    /**
+     * Validate the XML file against the official SAFT-PT v1.04_01 XSD schema.
+     *
+     * @return ValidationResult Schema-level errors (blocking if XML is malformed).
+     */
     protected function validateSchema(string $filePath): ValidationResult
     {
         $errors = [];
@@ -73,6 +96,9 @@ class SaftValidatorService
         return new ValidationResult(errors: $errors);
     }
 
+    /**
+     * Run all section-specific validators and collect their results.
+     */
     protected function runValidators(): void
     {
         $validators = [
@@ -94,6 +120,7 @@ class SaftValidatorService
         }
     }
 
+    /** Reset internal state for a fresh validation run. */
     protected function reset(): void
     {
         $this->errors = [];
@@ -102,6 +129,7 @@ class SaftValidatorService
         $this->xml = null;
     }
 
+    /** Collect libxml error messages into a single string for display. */
     protected function getLibxmlErrors(): string
     {
         $messages = [];

@@ -2,6 +2,13 @@
 
 namespace App\Services\SaftValidator;
 
+/**
+ * Immutable value object representing the outcome of a SAFT-PT validation.
+ *
+ * Groups all issues by severity: errors (must fix), warnings (should review),
+ * and info (contextual notes). A result is considered valid only when there
+ * are zero errors.
+ */
 class ValidationResult
 {
     public function __construct(

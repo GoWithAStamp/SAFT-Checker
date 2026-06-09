@@ -5,6 +5,14 @@ namespace App\Services\SaftValidator\Rules\SourceDocuments;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the WorkingDocuments section of a SAFT-PT file.
+ *
+ * Working documents include proforma invoices, quotes, purchase orders,
+ * and other non-fiscal documents that support the billing workflow.
+ * Validates document uniqueness, status codes (N=Normal, A=Cancelled, F=Invoiced),
+ * required dates, and the GrossTotal = NetTotal + TaxPayable formula.
+ */
 class WorkingDocumentsValidator extends BaseValidator
 {
     public function validate(): ValidationResult

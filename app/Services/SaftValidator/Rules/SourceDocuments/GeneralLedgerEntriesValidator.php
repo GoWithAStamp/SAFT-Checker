@@ -5,6 +5,17 @@ namespace App\Services\SaftValidator\Rules\SourceDocuments;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the GeneralLedgerEntries section in accounting SAFT files.
+ *
+ * Only runs for SAFT files of type C (Contabilidade) or I (Integrada).
+ * Enforces the fundamental principle of double-entry bookkeeping: within each
+ * transaction, the sum of all debit amounts must equal the sum of all credit
+ * amounts. Also validates journal/transaction uniqueness, transaction type codes
+ * (N=Normal, R=Regularization, A=Closing, J=Adjustment), period-to-date
+ * consistency, and cross-references each AccountID against the chart of accounts
+ * defined in GeneralLedgerAccounts.
+ */
 class GeneralLedgerEntriesValidator extends BaseValidator
 {
     public function validate(): ValidationResult
@@ -226,7 +237,8 @@ class GeneralLedgerEntriesValidator extends BaseValidator
             $month = (int) $dateParts[1];
             $declaredPeriod = (int) $period;
 
-            // Period should match month (1-12) or be special periods (13-16 for closing entries)
+            // Periods 1-12 map to calendar months; 13-16 are special closing periods
+            // (e.g., period 13 for year-end closing entries per SNC rules)
             if ($declaredPeriod >= 1 && $declaredPeriod <= 12 && $declaredPeriod !== $month) {
                 $this->addWarning(
                     'GLE_PERIOD_DATE_MISMATCH',
@@ -294,7 +306,7 @@ class GeneralLedgerEntriesValidator extends BaseValidator
             }
         }
 
-        // Check balance: total debits must equal total credits
+        // Double-entry bookkeeping: every transaction must balance (debits == credits)
         if (abs($totalDebit - $totalCredit) > 0.01) {
             $this->addError(
                 'GLE_TRANSACTION_UNBALANCED',

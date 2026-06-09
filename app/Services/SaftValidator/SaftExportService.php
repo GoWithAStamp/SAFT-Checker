@@ -2,12 +2,29 @@
 
 namespace App\Services\SaftValidator;
 
+/**
+ * Export service for converting SAFT-PT extracted data into CSV or XML formats.
+ *
+ * All CSV output includes a UTF-8 BOM (Byte Order Mark) at the start of the file.
+ * This ensures that Excel and other spreadsheet applications on Windows correctly
+ * detect the encoding and display Portuguese characters (accents, cedillas) properly.
+ * The delimiter is semicolon (;) rather than comma, which is the standard for
+ * European locale spreadsheets.
+ */
 class SaftExportService
 {
+    /**
+     * Convert a data array to CSV format.
+     *
+     * @param array $data    Rows of data to export.
+     * @param array $headers Map of field key => display label.
+     * @return string CSV content with UTF-8 BOM prefix.
+     */
     public static function toCsv(array $data, array $headers): string
     {
         $output = fopen('php://temp', 'r+');
 
+        // Write UTF-8 BOM so Excel recognizes the encoding
         fprintf($output, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
         fputcsv($output, array_values($headers), ';', '"', "\\");
@@ -31,6 +48,11 @@ class SaftExportService
         return $content;
     }
 
+    /**
+     * Convert a data array to a standalone XML document.
+     *
+     * Nested arrays (e.g., invoice lines) are rendered as child element groups.
+     */
     public static function toXml(array $data, string $rootElement, string $itemElement, array $headers): string
     {
         $dom = new \DOMDocument('1.0', 'UTF-8');
@@ -69,6 +91,7 @@ class SaftExportService
         return $dom->saveXML();
     }
 
+    /** Export the SAFT Header section as a key-value CSV. */
     public static function headerToCsv(array $header): string
     {
         $output = fopen('php://temp', 'r+');
@@ -87,6 +110,7 @@ class SaftExportService
         return $content;
     }
 
+    /** Export the SAFT Header section as an XML document. */
     public static function headerToXml(array $header): string
     {
         $dom = new \DOMDocument('1.0', 'UTF-8');
@@ -106,6 +130,12 @@ class SaftExportService
         return $dom->saveXML();
     }
 
+    /**
+     * Get the column headers (field key => Portuguese label) for a given data section.
+     *
+     * @param string $section One of: customers, suppliers, products, tax_table, invoices, etc.
+     * @return array<string, string> Field name => display label mapping.
+     */
     public static function getHeaders(string $section): array
     {
         return match ($section) {

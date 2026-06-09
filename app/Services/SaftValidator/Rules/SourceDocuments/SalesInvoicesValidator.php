@@ -5,6 +5,21 @@ namespace App\Services\SaftValidator\Rules\SourceDocuments;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the SalesInvoices section of a SAFT-PT file.
+ *
+ * Performs comprehensive checks on each invoice including:
+ *  - Invoice number format: must follow "TIPO SERIE/NUMERO" (e.g., "FT A/1234")
+ *  - ATCUD code presence and format (mandatory since 2023)
+ *  - Document status lifecycle (N=Normal, A=Cancelled, etc.)
+ *  - Tax exemption rules: when tax rate is 0%, TaxExemptionReason and
+ *    TaxExemptionCode are mandatory per Portuguese VAT law
+ *  - Mathematical consistency: NetTotal = sum of line amounts,
+ *    GrossTotal = NetTotal + TaxPayable
+ *  - Sequential numbering gap detection within each invoice series
+ *  - Cross-referencing of CustomerID and ProductCode against MasterFiles
+ *  - Date range validation against the Header period
+ */
 class SalesInvoicesValidator extends BaseValidator
 {
     public function validate(): ValidationResult
@@ -150,6 +165,7 @@ class SalesInvoicesValidator extends BaseValidator
 
     // ── ATCUD validation ──────────────────────────────────────
 
+    /** Validate the ATCUD (Codigo Unico de Documento) assigned by AT. */
     protected function validateATCUD(\SimpleXMLElement $invoice, string $invoiceNo): void
     {
         $atcud = $this->nodeValue($invoice, 'ATCUD');
@@ -597,6 +613,8 @@ class SalesInvoicesValidator extends BaseValidator
             $invoiceType = $this->nodeValue($invoice, 'InvoiceType');
             $creditTypes = ['NC', 'ND'];
 
+            // Credit notes (NC) and debit notes (ND) count towards TotalDebit;
+            // all other invoice types count towards TotalCredit
             if (in_array($invoiceType, $creditTypes)) {
                 $totalDebit += $grossTotal;
             } else {

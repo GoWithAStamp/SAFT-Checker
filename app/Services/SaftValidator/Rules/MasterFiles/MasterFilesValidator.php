@@ -5,6 +5,13 @@ namespace App\Services\SaftValidator\Rules\MasterFiles;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the MasterFiles section of a SAFT-PT file.
+ *
+ * Checks for duplicate entries in customers, products, suppliers, and tax table.
+ * Validates customer NIFs (skipping the generic consumer NIF 999999990),
+ * product type codes, and Portuguese mainland VAT rates (0%, 6%, 13%, 23%).
+ */
 class MasterFilesValidator extends BaseValidator
 {
     public function validate(): ValidationResult
@@ -69,6 +76,7 @@ class MasterFilesValidator extends BaseValidator
             return;
         }
 
+        // 999999990 is the generic "consumidor final" NIF — always valid
         if ($nif === '999999990') {
             return;
         }

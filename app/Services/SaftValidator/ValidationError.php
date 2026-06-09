@@ -2,6 +2,17 @@
 
 namespace App\Services\SaftValidator;
 
+/**
+ * Value object representing a single validation issue found in a SAFT-PT file.
+ *
+ * Severity levels:
+ *  - "error"   : Definite non-compliance. The file will likely be rejected by AT.
+ *  - "warning" : Potential issue that warrants manual review but may be acceptable.
+ *  - "info"    : Informational note (e.g., document counts, file type summary).
+ *
+ * Blocking errors (e.g., malformed XML) halt the entire validation pipeline
+ * because subsequent validators cannot operate on unparseable input.
+ */
 class ValidationError
 {
     public function __construct(

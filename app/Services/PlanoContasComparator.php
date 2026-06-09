@@ -4,6 +4,15 @@ namespace App\Services;
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
+/**
+ * Compares an externally uploaded chart of accounts (Plano de Contas) against the
+ * GeneralLedgerAccounts section extracted from a SAFT-PT file.
+ *
+ * Supports parsing the uploaded file from Excel (.xlsx/.xls) or CSV formats,
+ * with flexible header detection that accepts both Portuguese and English column names.
+ * The comparison identifies accounts missing from either side, description mismatches,
+ * and grouping category differences.
+ */
 class PlanoContasComparator
 {
     /**

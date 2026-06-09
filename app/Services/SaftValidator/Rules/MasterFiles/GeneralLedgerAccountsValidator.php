@@ -5,6 +5,16 @@ namespace App\Services\SaftValidator\Rules\MasterFiles;
 use App\Services\SaftValidator\Rules\BaseValidator;
 use App\Services\SaftValidator\ValidationResult;
 
+/**
+ * Validates the GeneralLedgerAccounts section (chart of accounts) in accounting SAFT files.
+ *
+ * Only runs for SAFT files of type C (Contabilidade) or I (Integrada).
+ * Validates account structure per the SNC (Sistema de Normalização Contabilística):
+ *  - GroupingCategory codes: GR/GA/GM (general) and AR/AA/AM (analytical)
+ *  - TaxonomyReference per Portaria 302/2016
+ *  - Balance integrity (debit and credit cannot both be non-zero simultaneously)
+ *  - TaxonomyCode format (numeric, typically 1-999)
+ */
 class GeneralLedgerAccountsValidator extends BaseValidator
 {
     public function validate(): ValidationResult
