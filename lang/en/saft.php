@@ -269,7 +269,7 @@ return [
     'cookie_banner_text' => 'This site uses only strictly necessary cookies for functionality (session, CSRF security, and theme preferences). We do not use tracking or analytics cookies. More information in our',
     'cookie_accept' => 'Got it',
     'cold_start_title' => 'First load may be slow.',
-    'cold_start_text' => 'This site uses free hosting that sleeps after inactivity. If it took a while to load (~50s), that\'s normal — it\'s up now!',
+    'cold_start_text' => 'To keep this service free for everyone, we use free hosting. Due to inactivity, the server may sleep and the first load can take ~50 seconds. If it was slow, that\'s normal — it\'s up now!',
 
     'privacy_title' => 'Privacy Policy',
     'privacy_last_updated' => 'Last updated',

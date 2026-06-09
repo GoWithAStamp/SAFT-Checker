@@ -268,8 +268,8 @@ return [
     'gdpr_secure_line' => 'Processado localmente · Nenhum dado é armazenado',
     'cookie_banner_text' => 'Este site utiliza apenas cookies estritamente necessários para o funcionamento (sessão, segurança CSRF e preferências de tema). Não utilizamos cookies de rastreamento ou analítica. Mais informações na',
     'cookie_accept' => 'Entendido',
-    'cold_start_title' => 'Primeiro acesso pode demorar.',
-    'cold_start_text' => 'Este site usa alojamento gratuito que adormece com inatividade. Se demorou a carregar (~50s), é normal — já está online!',
+    'cold_start_title' => 'O primeiro acesso pode demorar.',
+    'cold_start_text' => 'Para manter este serviço disponível para todos sem custos, utilizamos alojamento gratuito. Devido à inatividade, o servidor pode adormecer e o primeiro carregamento demorar ~50 segundos. Se demorou, é normal — já está online!',
 
     'privacy_title' => 'Política de Privacidade',
     'privacy_last_updated' => 'Última atualização',
