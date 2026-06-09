@@ -11,7 +11,8 @@ RUN install-php-extensions \
     simplexml \
     dom \
     libxml \
-    zip
+    zip \
+    gd
 
 # Install composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
