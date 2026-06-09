@@ -52,5 +52,6 @@ RUN mkdir -p /app/database && \
 # Cache views (Livewire assets served via routes, not published files)
 RUN php artisan view:cache
 
-ENTRYPOINT ["php", "artisan", "octane:frankenphp"]
-CMD ["--host=0.0.0.0", "--port=8080"]
+ENV PORT=8080
+
+CMD php artisan octane:frankenphp --host=0.0.0.0 --port=$PORT

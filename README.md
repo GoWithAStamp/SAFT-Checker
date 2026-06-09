@@ -4,7 +4,7 @@
 
 Validate your SAF-T (PT) files — billing or accounting — against Portuguese tax rules. Upload an XML, get instant validation with detailed error reporting, and explore all data in searchable tables.
 
-**Live demo:** [saft-checker.fly.dev](https://saft-checker.fly.dev)
+**Live demo:** [saft-checker.onrender.com](https://saft-checker.onrender.com)
 
 ---
 
@@ -25,7 +25,7 @@ Validate your SAF-T (PT) files — billing or accounting — against Portuguese 
 - **Tailwind CSS 4** with Apple Liquid Glass design
 - **FrankenPHP** + Laravel Octane (production)
 - **PhpSpreadsheet** for Excel/CSV parsing
-- **Fly.io** deployment
+- **Render** deployment (Docker)
 
 ## Getting Started
 
