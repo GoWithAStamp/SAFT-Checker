@@ -2,8 +2,8 @@
 <AuditFile xmlns="urn:OECD:StandardAuditFile-Tax:PT_1.04_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Header>
         <AuditFileVersion>1.04_01</AuditFileVersion>
-        <CompanyID>503876214</CompanyID>
-        <TaxRegistrationNumber>503876214</TaxRegistrationNumber>
+        <CompanyID>503876216</CompanyID>
+        <TaxRegistrationNumber>503876216</TaxRegistrationNumber>
         <TaxAccountingBasis>F</TaxAccountingBasis>
         <CompanyName>Lusitania Comercio e Servicos, Lda</CompanyName>
         <BusinessName>Lusitania Comercio</BusinessName>
@@ -31,7 +31,7 @@
         <Customer>
             <CustomerID>C001</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>509123456</CustomerTaxID>
+            <CustomerTaxID>509123457</CustomerTaxID>
             <CompanyName>Padaria Central, Lda</CompanyName>
             <BillingAddress>
                 <AddressDetail>Rua do Comercio 12</AddressDetail>
@@ -44,7 +44,7 @@
         <Customer>
             <CustomerID>C002</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>510987654</CustomerTaxID>
+            <CustomerTaxID>510987656</CustomerTaxID>
             <CompanyName>Restaurante Beira Rio, SA</CompanyName>
             <BillingAddress>
                 <AddressDetail>Av. Marginal 88</AddressDetail>
@@ -57,7 +57,7 @@
         <Customer>
             <CustomerID>C003</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>511222333</CustomerTaxID>
+            <CustomerTaxID>511222335</CustomerTaxID>
             <CompanyName>Hotel Miramar, Lda</CompanyName>
             <BillingAddress>
                 <AddressDetail>Praca da Republica 5</AddressDetail>
@@ -70,7 +70,7 @@
         <Customer>
             <CustomerID>C004</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>512333444</CustomerTaxID>
+            <CustomerTaxID>512333440</CustomerTaxID>
             <CompanyName>Supermercados Algarve, SA</CompanyName>
             <BillingAddress>
                 <AddressDetail>EN125, Km 34</AddressDetail>
@@ -96,7 +96,7 @@
         <Customer>
             <CustomerID>C006</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>513444555</CustomerTaxID>
+            <CustomerTaxID>513444556</CustomerTaxID>
             <CompanyName>Cafe Lisboa, Unipessoal Lda</CompanyName>
             <BillingAddress>
                 <AddressDetail>Rua Garrett 120</AddressDetail>
@@ -109,7 +109,7 @@
         <Customer>
             <CustomerID>C007</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>514555666</CustomerTaxID>
+            <CustomerTaxID>514555661</CustomerTaxID>
             <CompanyName>Construcoes Douro, SA</CompanyName>
             <BillingAddress>
                 <AddressDetail>Zona Industrial de Gaia, Lote 8</AddressDetail>
@@ -225,9 +225,9 @@
     </MasterFiles>
     <SourceDocuments>
         <SalesInvoices>
-            <NumberOfEntries>14</NumberOfEntries>
-            <TotalDebit>615.00</TotalDebit>
-            <TotalCredit>19337.54</TotalCredit>
+            <NumberOfEntries>13</NumberOfEntries>
+            <TotalDebit>125.08</TotalDebit>
+            <TotalCredit>6997.67</TotalCredit>
             <!-- FT 2026/0001 -->
             <Invoice>
                 <InvoiceNo>FT 2026/0001</InvoiceNo>
@@ -312,9 +312,9 @@
                     </Tax>
                 </Line>
                 <DocumentTotals>
-                    <TaxPayable>37.36</TaxPayable>
+                    <TaxPayable>36.36</TaxPayable>
                     <NetTotal>563.50</NetTotal>
-                    <GrossTotal>600.86</GrossTotal>
+                    <GrossTotal>599.86</GrossTotal>
                 </DocumentTotals>
             </Invoice>
             <!-- FT 2026/0002 -->
@@ -993,16 +993,16 @@
                     </Tax>
                 </Line>
                 <DocumentTotals>
-                    <TaxPayable>84.95</TaxPayable>
+                    <TaxPayable>83.81</TaxPayable>
                     <NetTotal>786.30</NetTotal>
-                    <GrossTotal>871.25</GrossTotal>
+                    <GrossTotal>870.11</GrossTotal>
                 </DocumentTotals>
             </Invoice>
         </SalesInvoices>
         <Payments>
             <NumberOfEntries>3</NumberOfEntries>
             <TotalDebit>0.00</TotalDebit>
-            <TotalCredit>1764.01</TotalCredit>
+            <TotalCredit>1763.01</TotalCredit>
             <Payment>
                 <PaymentRefNo>RC 2026/0001</PaymentRefNo>
                 <ATCUD>MNOP3456-1</ATCUD>
@@ -1025,16 +1025,16 @@
                         <OriginatingON>FT 2026/0001</OriginatingON>
                         <InvoiceDate>2026-01-08</InvoiceDate>
                     </SourceDocumentID>
-                    <CreditAmount>600.86</CreditAmount>
+                    <CreditAmount>599.86</CreditAmount>
                 </Line>
                 <DocumentTotals>
                     <TaxPayable>0.00</TaxPayable>
-                    <NetTotal>600.86</NetTotal>
-                    <GrossTotal>600.86</GrossTotal>
+                    <NetTotal>599.86</NetTotal>
+                    <GrossTotal>599.86</GrossTotal>
                 </DocumentTotals>
                 <PaymentMethod>
                     <PaymentMechanism>TB</PaymentMechanism>
-                    <PaymentAmount>600.86</PaymentAmount>
+                    <PaymentAmount>599.86</PaymentAmount>
                     <PaymentDate>2026-01-20</PaymentDate>
                 </PaymentMethod>
             </Payment>

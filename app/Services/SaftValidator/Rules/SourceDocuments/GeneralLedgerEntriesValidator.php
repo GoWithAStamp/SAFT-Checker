@@ -16,12 +16,7 @@ class GeneralLedgerEntriesValidator extends BaseValidator
             return $this->result();
         }
 
-        $sd = $this->xml->SourceDocuments ?? null;
-        if (!$sd) {
-            return $this->result();
-        }
-
-        $gle = $sd->GeneralLedgerEntries ?? null;
+        $gle = $this->xml->GeneralLedgerEntries ?? null;
         if (!$gle) {
             $this->addWarning(
                 'GLE_MISSING',

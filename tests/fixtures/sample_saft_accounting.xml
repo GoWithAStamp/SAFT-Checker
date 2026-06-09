@@ -2,8 +2,8 @@
 <AuditFile xmlns="urn:OECD:StandardAuditFile-Tax:PT_1.04_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Header>
         <AuditFileVersion>1.04_01</AuditFileVersion>
-        <CompanyID>503876214</CompanyID>
-        <TaxRegistrationNumber>503876214</TaxRegistrationNumber>
+        <CompanyID>503876216</CompanyID>
+        <TaxRegistrationNumber>503876216</TaxRegistrationNumber>
         <TaxAccountingBasis>C</TaxAccountingBasis>
         <CompanyName>Lusitania Contabilidade, Lda</CompanyName>
         <BusinessName>Lusitania Contabilidade</BusinessName>
@@ -272,7 +272,7 @@
         <Customer>
             <CustomerID>C001</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>509123456</CustomerTaxID>
+            <CustomerTaxID>509123457</CustomerTaxID>
             <CompanyName>Padaria Central, Lda</CompanyName>
             <BillingAddress>
                 <AddressDetail>Rua do Comercio 12</AddressDetail>
@@ -285,7 +285,7 @@
         <Customer>
             <CustomerID>C002</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>510987654</CustomerTaxID>
+            <CustomerTaxID>510987656</CustomerTaxID>
             <CompanyName>Restaurante Beira Rio, SA</CompanyName>
             <BillingAddress>
                 <AddressDetail>Av. Marginal 88</AddressDetail>
@@ -298,7 +298,7 @@
         <Customer>
             <CustomerID>C003</CustomerID>
             <AccountID>211</AccountID>
-            <CustomerTaxID>511222333</CustomerTaxID>
+            <CustomerTaxID>511222335</CustomerTaxID>
             <CompanyName>Hotel Miramar, Lda</CompanyName>
             <BillingAddress>
                 <AddressDetail>Praca da Republica 5</AddressDetail>
@@ -324,7 +324,7 @@
         <Supplier>
             <SupplierID>F001</SupplierID>
             <AccountID>221</AccountID>
-            <SupplierTaxID>501234567</SupplierTaxID>
+            <SupplierTaxID>501234560</SupplierTaxID>
             <CompanyName>Distribuidora Norte, SA</CompanyName>
             <BillingAddress>
                 <AddressDetail>Zona Industrial Maia, Lote 5</AddressDetail>
@@ -337,7 +337,7 @@
         <Supplier>
             <SupplierID>F002</SupplierID>
             <AccountID>221</AccountID>
-            <SupplierTaxID>502345678</SupplierTaxID>
+            <SupplierTaxID>502345675</SupplierTaxID>
             <CompanyName>Transportes Rapidos do Sul, Lda</CompanyName>
             <BillingAddress>
                 <AddressDetail>Rua Industrial 34</AddressDetail>
@@ -350,7 +350,7 @@
         <Supplier>
             <SupplierID>F003</SupplierID>
             <AccountID>221</AccountID>
-            <SupplierTaxID>503456789</SupplierTaxID>
+            <SupplierTaxID>503456780</SupplierTaxID>
             <CompanyName>EDP Servico Universal, SA</CompanyName>
             <BillingAddress>
                 <AddressDetail>Av. da Energia 1</AddressDetail>
@@ -425,7 +425,7 @@
         <SalesInvoices>
             <NumberOfEntries>5</NumberOfEntries>
             <TotalDebit>0.00</TotalDebit>
-            <TotalCredit>31980.00</TotalCredit>
+            <TotalCredit>27032.16</TotalCredit>
             <Invoice>
                 <InvoiceNo>FT 2026/0001</InvoiceNo>
                 <ATCUD>WXYZ1234-1</ATCUD>
@@ -750,7 +750,7 @@
         <WorkingDocuments>
             <NumberOfEntries>2</NumberOfEntries>
             <TotalDebit>0.00</TotalDebit>
-            <TotalCredit>5250.00</TotalCredit>
+            <TotalCredit>6400.00</TotalCredit>
             <WorkDocument>
                 <DocumentNumber>OR 2026/0001</DocumentNumber>
                 <ATCUD>ORCM1234-1</ATCUD>
@@ -893,9 +893,9 @@
         </MovementOfGoods>
     </SourceDocuments>
     <GeneralLedgerEntries>
-        <NumberOfEntries>10</NumberOfEntries>
-        <TotalDebit>67675.00</TotalDebit>
-        <TotalCredit>67675.00</TotalCredit>
+        <NumberOfEntries>11</NumberOfEntries>
+        <TotalDebit>68355.00</TotalDebit>
+        <TotalCredit>68355.00</TotalCredit>
         <!-- Diario 01 — Vendas -->
         <Journal>
             <JournalID>01</JournalID>
