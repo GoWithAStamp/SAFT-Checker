@@ -53,9 +53,10 @@ RUN mkdir -p /app/database && \
 RUN php artisan view:cache
 
 ENV PORT=8080
+ENV SERVER_MODE=octane
 
-# Create startup script to support dynamic PORT
-RUN printf '#!/bin/sh\nexec php artisan octane:frankenphp --host=0.0.0.0 --port=${PORT}\n' > /app/start.sh && \
+# Create startup script — uses Octane (Fly) or built-in server (Render)
+RUN printf '#!/bin/sh\nif [ "$SERVER_MODE" = "octane" ]; then\n  exec php artisan octane:frankenphp --host=0.0.0.0 --port=${PORT}\nelse\n  exec php artisan serve --host=0.0.0.0 --port=${PORT}\nfi\n' > /app/start.sh && \
     chmod +x /app/start.sh
 
 ENTRYPOINT []

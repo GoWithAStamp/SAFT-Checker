@@ -35,3 +35,5 @@ services:
         value: info
       - key: PORT
         value: "10000"
+      - key: SERVER_MODE
+        value: serve
