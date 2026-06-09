@@ -9,7 +9,7 @@ return [
 
     // Upload
     'upload_title' => 'Validate your SAF-T (PT) file',
-    'upload_description' => 'Upload your billing XML file. We verify compliance with Portuguese tax rules and organise all data into tables.',
+    'upload_description' => 'Upload your SAFT-PT file (billing or accounting). We verify compliance with Portuguese tax rules and organise all data into tables.',
     'upload_drag' => 'Drag your file here',
     'upload_or' => 'or',
     'upload_select' => 'Browse file',
@@ -23,7 +23,7 @@ return [
     'type_accounting' => 'Accounting',
     'type_accounting_desc' => 'Chart of accounts, journal entries and general ledger movements.',
     'upload_use_sample' => 'Use a sample file',
-    'upload_hint' => '.xml files up to 50 MB · SAF-T (PT) v1.04_01',
+    'upload_hint' => '.xml files up to 100 MB · SAF-T (PT) v1.04_01',
     'feat1_title' => 'Tax validation',
     'feat1_body' => 'Document sequence, digital signatures, tax IDs and totals checked automatically.',
     'feat2_title' => 'Organised data',

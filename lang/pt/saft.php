@@ -23,7 +23,7 @@ return [
     'type_accounting' => 'Contabilidade',
     'type_accounting_desc' => 'Plano de contas, lançamentos e movimentos do razão.',
     'upload_use_sample' => 'Ver um exemplo',
-    'upload_hint' => 'Ficheiros .xml ate 50 MB · SAF-T (PT) v1.04_01',
+    'upload_hint' => 'Ficheiros .xml até 100 MB · SAF-T (PT) v1.04_01',
     'feat1_title' => 'Validação fiscal',
     'feat1_body' => 'Sequência de documentos, assinaturas digitais, NIF e totais conferidos automaticamente.',
     'feat2_title' => 'Dados organizados',
