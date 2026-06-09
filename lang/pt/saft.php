@@ -96,6 +96,7 @@ return [
     'plano_status_diff' => 'Diferente',
     'plano_clear' => 'Limpar comparação',
     'plano_file' => 'Ficheiro',
+    'plano_download_example' => 'Descarregar exemplo',
 
     // Data tabs
     'data_header' => 'Cabeçalho',

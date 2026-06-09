@@ -1,0 +1,135 @@
+Conta;Descricao;Categoria
+11;Caixa;GM
+111;Caixa sede;GR
+12;Depositos a ordem;GM
+121;Banco X - conta a ordem;GR
+122;Banco Y - conta a ordem;GR
+13;Outros depositos bancarios;GM
+21;Clientes;GM
+211;Clientes c/c;GR
+2111;Clientes gerais;GR
+218;Adiantamentos de clientes;GR
+22;Fornecedores;GM
+221;Fornecedores c/c;GR
+2211;Fornecedores gerais;GR
+228;Adiantamentos a fornecedores;GR
+23;Pessoal;GM
+231;Remuneracoes a pagar;GR
+232;Adiantamentos ao pessoal;GR
+24;Estado e outros entes publicos;GM
+2411;IVA - Imposto suportado;GR
+2412;IVA - Imposto dedutivel;GR
+2413;IVA - Imposto liquidado;GR
+2414;IVA - Regularizacoes;GR
+2415;IVA - Apuramento;GR
+242;Retencao de impostos sobre rendimentos;GR
+243;Imposto sobre o rendimento;GR
+245;Contribuicoes para a Seguranca Social;GR
+25;Financiamentos obtidos;GM
+251;Instituicoes de credito e sociedades financeiras;GR
+26;Acionistas/socios;GM
+261;Acionistas c/ subscricao;GR
+262;Quotas nao liberadas;GR
+27;Outras contas a receber e a pagar;GM
+271;Fornecedores de investimentos;GR
+272;Devedores e credores por acrescimos;GR
+278;Outros devedores e credores;GR
+28;Diferimentos;GM
+281;Gastos a reconhecer;GR
+282;Rendimentos a reconhecer;GR
+29;Provisoes;GM
+291;Provisoes - Impostos;GR
+292;Provisoes - Garantias a clientes;GR
+31;Compras;GM
+311;Mercadorias;GR
+312;Materias-primas;GR
+32;Mercadorias;GM
+321;Mercadorias - armazem;GR
+33;Materias-primas, subsidiarias e de consumo;GM
+331;Materias-primas;GR
+34;Produtos acabados e intermedios;GM
+341;Produtos acabados;GR
+35;Subprodutos, desperdicios, residuos e refugos;GM
+36;Produtos e trabalhos em curso;GM
+37;Ativos biologicos;GM
+38;Reclassificacao e regularizacao de inventarios;GM
+39;Adiantamentos por conta de compras;GM
+41;Investimentos financeiros;GM
+411;Investimentos em subsidiarias;GR
+42;Propriedades de investimento;GM
+421;Terrenos e recursos naturais;GR
+422;Edificios e outras construcoes;GR
+43;Ativos fixos tangiveis;GM
+431;Terrenos e recursos naturais;GR
+432;Edificios e outras construcoes;GR
+433;Equipamento basico;GR
+434;Equipamento de transporte;GR
+435;Equipamento administrativo;GR
+436;Equipamentos biologicos;GR
+437;Outros ativos fixos tangiveis;GR
+438;Depreciacao acumulada;GR
+44;Ativos intangiveis;GM
+441;Goodwill;GR
+442;Projetos de desenvolvimento;GR
+443;Programas de computador;GR
+444;Propriedade industrial;GR
+448;Amortizacao acumulada;GR
+45;Investimentos em curso;GM
+451;Investimentos financeiros em curso;GR
+452;Propriedades de investimento em curso;GR
+453;Ativos fixos tangiveis em curso;GR
+454;Ativos intangiveis em curso;GR
+51;Capital subscrito;GM
+52;Acoes (quotas) proprias;GM
+53;Outros instrumentos de capital proprio;GM
+54;Premios de emissao;GM
+55;Reservas;GM
+551;Reservas legais;GR
+56;Resultados transitados;GM
+57;Ajustamentos em ativos financeiros;GM
+58;Excedentes de revalorizacao;GM
+59;Outras variacoes no capital proprio;GM
+61;Custo das mercadorias vendidas e das materias consumidas;GM
+62;Fornecimentos e servicos externos;GM
+621;Subcontratos;GR
+622;Servicos especializados;GR
+623;Materiais;GR
+624;Energia e fluidos;GR
+625;Deslocacoes, estadas e transportes;GR
+626;Servicos diversos;GR
+63;Gastos com o pessoal;GM
+631;Remuneracoes dos orgaos sociais;GR
+632;Remuneracoes do pessoal;GR
+635;Encargos sobre remuneracoes;GR
+636;Seguros de acidentes no trabalho;GR
+638;Outros gastos com o pessoal;GR
+64;Gastos de depreciacao e de amortizacao;GM
+641;Propriedades de investimento;GR
+642;Ativos fixos tangiveis;GR
+643;Ativos intangiveis;GR
+65;Perdas por imparidade;GM
+66;Perdas por reducoes de justo valor;GM
+67;Provisoes do periodo;GM
+68;Outros gastos e perdas;GM
+681;Impostos;GR
+682;Descontos de pronto pagamento concedidos;GR
+688;Outros;GR
+69;Gastos e perdas de financiamento;GM
+691;Juros suportados;GR
+71;Vendas;GM
+711;Mercadorias;GR
+712;Produtos acabados e intermedios;GR
+72;Prestacoes de servicos;GM
+73;Variacoes nos inventarios da producao;GM
+74;Trabalhos para a propria entidade;GM
+75;Subsidios a exploracao;GM
+76;Reversoes;GM
+77;Ganhos por aumentos de justo valor;GM
+78;Outros rendimentos e ganhos;GM
+781;Rendimentos suplementares;GR
+782;Descontos de pronto pagamento obtidos;GR
+783;Recuperacao de dividas a receber;GR
+788;Outros;GR
+79;Juros, dividendos e outros rendimentos similares;GM
+791;Juros obtidos;GR
+81;Resultado liquido do periodo;GM

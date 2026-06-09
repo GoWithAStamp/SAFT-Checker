@@ -29,6 +29,22 @@
 
                 <p class="text-[12px] text-[var(--color-text-dim)] dark:text-[#6b665e] mt-2">{{ __('saft.plano_upload_hint') }}</p>
 
+                <div class="mt-3 flex items-center gap-3">
+                    <span class="text-[12px] text-[var(--color-text-dim)] dark:text-[#6b665e]">{{ __('saft.plano_download_example') }}:</span>
+                    <a href="/examples/plano_contas_exemplo.xlsx" download class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        Excel (.xlsx)
+                    </a>
+                    <a href="/examples/plano_contas_exemplo.csv" download class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        CSV (.csv)
+                    </a>
+                </div>
+
                 @if($planoError)
                     <div class="mt-3 px-4 py-2.5 rounded-[10px] bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/40 text-red-700 dark:text-red-400 text-[13px]">
                         {{ $planoError }}

@@ -96,6 +96,7 @@ return [
     'plano_status_diff' => 'Different',
     'plano_clear' => 'Clear comparison',
     'plano_file' => 'File',
+    'plano_download_example' => 'Download example',
 
     // Data tabs
     'data_header' => 'Header',
