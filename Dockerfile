@@ -54,4 +54,9 @@ RUN php artisan view:cache
 
 ENV PORT=8080
 
-CMD php artisan octane:frankenphp --host=0.0.0.0 --port=$PORT
+# Create startup script to support dynamic PORT
+RUN printf '#!/bin/sh\nexec php artisan octane:frankenphp --host=0.0.0.0 --port=${PORT}\n' > /app/start.sh && \
+    chmod +x /app/start.sh
+
+ENTRYPOINT []
+CMD ["/bin/sh", "/app/start.sh"]
