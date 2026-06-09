@@ -268,6 +268,8 @@ return [
     'gdpr_secure_line' => 'Processed locally · no data is stored',
     'cookie_banner_text' => 'This site uses only strictly necessary cookies for functionality (session, CSRF security, and theme preferences). We do not use tracking or analytics cookies. More information in our',
     'cookie_accept' => 'Got it',
+    'cold_start_title' => 'First load may be slow.',
+    'cold_start_text' => 'This site uses free hosting that sleeps after inactivity. If it took a while to load (~50s), that\'s normal — it\'s up now!',
 
     'privacy_title' => 'Privacy Policy',
     'privacy_last_updated' => 'Last updated',

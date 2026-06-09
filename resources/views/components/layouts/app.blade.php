@@ -58,6 +58,36 @@
         </div>
     </nav>
 
+    {{-- Cold Start Notice --}}
+    <div
+        x-data="{ show: !localStorage.getItem('cold_start_dismissed') }"
+        x-show="show"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="-translate-y-2 opacity-0"
+        x-transition:enter-end="translate-y-0 opacity-100"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="translate-y-0 opacity-100"
+        x-transition:leave-end="-translate-y-2 opacity-0"
+        class="bg-amber-50 dark:bg-amber-950/30 border-b border-amber-200 dark:border-amber-800/40"
+        x-cloak
+    >
+        <div class="max-w-[1260px] mx-auto px-6 py-2.5 flex items-center justify-between gap-4">
+            <p class="text-[12.5px] text-amber-800 dark:text-amber-300/90 leading-snug">
+                <span class="font-semibold">💤 {{ __('saft.cold_start_title') }}</span>
+                {{ __('saft.cold_start_text') }}
+            </p>
+            <button
+                @click="localStorage.setItem('cold_start_dismissed', 'true'); show = false"
+                class="shrink-0 text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-200 transition-colors"
+                aria-label="Dismiss"
+            >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <main class="max-w-[1260px] mx-auto px-6 py-8 flex-1 w-full">
         {{ $slot }}
     </main>
