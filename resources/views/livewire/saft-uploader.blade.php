@@ -284,6 +284,20 @@
                     <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                 @endif
             </button>
+            @if($isAccountingSaft)
+                <button wire:click="setActiveTab('plano')" class="relative px-5 py-3 text-sm font-semibold transition-colors flex items-center gap-2 {{ $activeTab === 'plano' ? 'text-[var(--color-text-strong)] dark:text-[#f4f1ec]' : 'text-[var(--color-text-dim)] dark:text-[#827c72] hover:text-[var(--color-text-muted)] dark:hover:text-[#b3ada3]' }}">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    {{ __('saft.tab_plano') }}
+                    @if($planoComparison && ($planoComparison['summary']['missing_in_saft'] > 0 || $planoComparison['summary']['extra_in_saft'] > 0 || $planoComparison['summary']['description_diff'] > 0))
+                        <span class="pill-count bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400">{{ $planoComparison['summary']['missing_in_saft'] + $planoComparison['summary']['extra_in_saft'] + $planoComparison['summary']['description_diff'] + $planoComparison['summary']['grouping_diff'] }}</span>
+                    @endif
+                    @if($activeTab === 'plano')
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
+                    @endif
+                </button>
+            @endif
         </div>
 
         @if($activeTab === 'validation')
@@ -292,6 +306,10 @@
 
         @if($activeTab === 'data' && $saftData)
             @include('livewire.partials.data-tables')
+        @endif
+
+        @if($activeTab === 'plano' && $isAccountingSaft)
+            @include('livewire.partials.plano-comparison')
         @endif
     </div>
     @endif

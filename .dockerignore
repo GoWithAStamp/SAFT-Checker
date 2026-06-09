@@ -6,7 +6,8 @@ storage/logs/*
 storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
-tests
+tests/Feature
+tests/Unit
 .git
 .github
 .vscode

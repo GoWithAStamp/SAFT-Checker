@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Services\SaftValidator\SaftValidatorService;
 use App\Services\SaftValidator\SaftDataExtractor;
 use App\Services\SaftValidator\SaftExportService;
+use App\Services\PlanoContasComparator;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -30,6 +31,11 @@ class SaftUploader extends Component
     public string $saftType = 'billing';
     public ?string $searchQuery = null;
     public ?string $validationFilter = null;
+    public $planoFile;
+    public ?array $planoComparison = null;
+    public ?string $planoFileName = null;
+    public ?string $planoError = null;
+    public string $planoFilter = 'all';
 
     public function updatedSaftFile(): void
     {
@@ -159,6 +165,10 @@ class SaftUploader extends Component
         $this->saftType = 'billing';
         $this->searchQuery = null;
         $this->validationFilter = null;
+        $this->planoComparison = null;
+        $this->planoFileName = null;
+        $this->planoError = null;
+        $this->planoFilter = 'all';
     }
 
     public function setActiveTab(string $tab): void
@@ -182,6 +192,58 @@ class SaftUploader extends Component
     public function toggleInvoice(string $invoiceNo): void
     {
         $this->expandedInvoice = $this->expandedInvoice === $invoiceNo ? null : $invoiceNo;
+    }
+
+    public function updatedPlanoFile(): void
+    {
+        $this->planoError = null;
+        $this->planoComparison = null;
+
+        if (!$this->planoFile) return;
+
+        $extension = strtolower($this->planoFile->getClientOriginalExtension());
+        if (!in_array($extension, ['xlsx', 'xls', 'csv'])) {
+            $this->planoError = __('saft.plano_invalid_format');
+            $this->planoFile = null;
+            return;
+        }
+
+        $this->planoFileName = $this->planoFile->getClientOriginalName();
+
+        try {
+            $path = $this->planoFile->getRealPath();
+            $planoAccounts = PlanoContasComparator::parse($path, $extension);
+
+            if (empty($planoAccounts)) {
+                $this->planoError = __('saft.plano_empty');
+                return;
+            }
+
+            $saftAccounts = $this->saftData['general_ledger_accounts'] ?? [];
+            if (empty($saftAccounts)) {
+                $this->planoError = __('saft.plano_no_saft_accounts');
+                return;
+            }
+
+            $this->planoComparison = PlanoContasComparator::compare($planoAccounts, $saftAccounts);
+        } catch (\Throwable $e) {
+            $this->planoError = __('saft.plano_parse_error') . ' ' . $e->getMessage();
+        } finally {
+            $this->planoFile = null;
+        }
+    }
+
+    public function setPlanoFilter(string $filter): void
+    {
+        $this->planoFilter = $filter;
+    }
+
+    public function clearPlanoComparison(): void
+    {
+        $this->planoComparison = null;
+        $this->planoFileName = null;
+        $this->planoError = null;
+        $this->planoFilter = 'all';
     }
 
     public function togglePayment(string $paymentNo): void
