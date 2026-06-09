@@ -6,6 +6,361 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+    /* Warm surface palette — light */
+    --color-surface: #ffffff;
+    --color-surface-2: #faf9f6;
+    --color-surface-3: #f3f1ec;
+    --color-bg: #f7f6f3;
+    --color-bg-2: #efede8;
+
+    /* Borders — warm */
+    --color-border-warm: #e7e4dd;
+    --color-border-warm-2: #d8d4cb;
+    --color-border-warm-strong: #c9c4b9;
+
+    /* Text — warm */
+    --color-text-strong: #211f1b;
+    --color-text-muted: #5c574e;
+    --color-text-dim: #8a847a;
+
+    /* Accent */
+    --color-accent: #2563eb;
+    --color-accent-soft: color-mix(in srgb, #2563eb 12%, #ffffff);
+
+    /* Semantic hues */
+    --color-ok: #16a34a;
+    --color-danger: #e0322b;
+    --color-warn: #d97706;
+    --color-info: #2563eb;
+    --color-h-green: #16a34a;
+    --color-h-red: #e0322b;
+    --color-h-amber: #d97706;
+    --color-h-blue: #2563eb;
+    --color-h-indigo: #4f46e5;
+    --color-h-teal: #0d9488;
+    --color-h-violet: #7c3aed;
+
+    /* Shadows — light */
+    --shadow-sm: 0 1px 2px rgba(40,35,25,.05), 0 1px 3px rgba(40,35,25,.06);
+    --shadow-md: 0 2px 4px rgba(40,35,25,.05), 0 8px 24px rgba(40,35,25,.08);
+    --shadow-lg: 0 8px 40px rgba(40,35,25,.12);
+}
+
+/* ─── Liquid Glass tokens ────────────────────────────────── */
+:root {
+    --glass-blur: saturate(185%) blur(20px);
+    --glass-bg: color-mix(in srgb, #fff 58%, transparent);
+    --glass-bg-2: color-mix(in srgb, #fff 44%, transparent);
+    --glass-brd: color-mix(in srgb, #fff 70%, var(--color-border-warm-2));
+    --glass-hi: inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.22);
+}
+.dark {
+    --glass-bg: color-mix(in srgb, #3a352f 50%, transparent);
+    --glass-bg-2: color-mix(in srgb, #3a352f 38%, transparent);
+    --glass-brd: color-mix(in srgb, #fff 14%, transparent);
+    --glass-hi: inset 0 1px 0 rgba(255,255,255,.13), inset 0 0 0 1px rgba(255,255,255,.05);
+    /* Dark semantic brightened */
+    --color-ok: #3ddc84;
+    --color-danger: #ff6b6b;
+    --color-warn: #f5b53d;
+    --color-info: #5fa3f5;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+    --shadow-md: 0 2px 6px rgba(0,0,0,.35), 0 10px 30px rgba(0,0,0,.4);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,.5);
+}
+
+/* ─── Ambient colour field (Liquid Glass refraction) ───── */
+body {
+    background: var(--color-bg);
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(720px 560px at 10% -8%, color-mix(in srgb, var(--color-accent) 30%, transparent), transparent 68%),
+        radial-gradient(640px 540px at 94% 2%, color-mix(in srgb, var(--color-h-violet) 24%, transparent), transparent 66%),
+        radial-gradient(760px 620px at 72% 112%, color-mix(in srgb, var(--color-h-teal) 20%, transparent), transparent 70%);
+    opacity: .55;
+}
+.dark body {
+    background: #161513;
+}
+.dark body::before {
+    opacity: .4;
+}
+
+/* ─── Frosted glass nav ─────────────────────────────────── */
+.nav-glass {
+    background: var(--glass-bg-2);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom-color: var(--glass-brd);
+}
+
+/* ─── Frosted glass surfaces ────────────────────────────── */
+.glass-surface {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+
+/* Type card */
+.type-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+    transition: border-color 0.14s, box-shadow 0.14s, transform 0.08s, background 0.14s;
+}
+.type-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--color-border-warm-strong);
+    box-shadow: var(--shadow-lg), var(--glass-hi);
+}
+.type-card.selected {
+    border-color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 16%, transparent);
+}
+.dark .type-card.selected {
+    background: color-mix(in srgb, var(--color-accent) 10%, #201e1b);
+}
+
+/* Eyebrow pill */
+.eyebrow {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 11%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, var(--color-accent) 22%, var(--color-surface));
+}
+
+/* Dropzone */
+.dropzone-area {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1.5px dashed var(--color-border-warm-2);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-lg), var(--glass-hi);
+    transition: border-color 0.16s, background 0.16s, box-shadow 0.16s;
+}
+.dropzone-area.dragging {
+    border-color: var(--color-accent);
+    border-style: dashed;
+    background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 14%, transparent);
+}
+
+/* Feature cards */
+.feature-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+
+/* Summary stat cards */
+.stat-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+    transition: box-shadow 0.14s, transform 0.08s, border-color 0.14s;
+    cursor: pointer;
+}
+.stat-card:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg), var(--glass-hi);
+}
+.stat-card.active-filter {
+    box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+/* Issue cards */
+.issue-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+
+/* Issue severity bar */
+.issue-bar-error { border-left: 3px solid var(--color-danger); }
+.issue-bar-warning { border-left: 3px solid var(--color-warn); }
+.issue-bar-info { border-left: 3px solid var(--color-info); }
+
+/* Data table frame */
+.data-table-frame {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+
+/* Status banner */
+.status-banner-error {
+    background: color-mix(in srgb, var(--color-danger) 8%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, var(--color-danger) 26%, var(--color-surface));
+}
+.dark .status-banner-error {
+    background: color-mix(in srgb, var(--color-danger) 12%, #201e1b);
+    border-color: color-mix(in srgb, var(--color-danger) 25%, #201e1b);
+}
+.status-banner-ok {
+    background: color-mix(in srgb, var(--color-ok) 9%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, var(--color-ok) 26%, var(--color-surface));
+}
+.dark .status-banner-ok {
+    background: color-mix(in srgb, var(--color-ok) 12%, #201e1b);
+    border-color: color-mix(in srgb, var(--color-ok) 25%, #201e1b);
+}
+
+/* Search box glass */
+.searchbox-glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+.searchbox-glass:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 14%, transparent);
+}
+
+/* Header field cards */
+.hfield-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+
+/* Type tags */
+.type-tag-billing {
+    color: color-mix(in srgb, #0d9488 64%, var(--color-text-strong));
+    background: color-mix(in srgb, #0d9488 13%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, #0d9488 28%, var(--color-surface));
+}
+.type-tag-accounting {
+    color: color-mix(in srgb, #7c3aed 64%, var(--color-text-strong));
+    background: color-mix(in srgb, #7c3aed 13%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, #7c3aed 26%, var(--color-surface));
+}
+
+/* Data pill nav */
+.pill-nav {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 3px;
+}
+.pill-nav::-webkit-scrollbar {
+    height: 4px;
+}
+.pill-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+.pill-nav::-webkit-scrollbar-thumb {
+    background: var(--color-border-warm-2);
+    border-radius: 4px;
+}
+
+/* Badge count in pill */
+.pill-count {
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 0 6px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Tabular numbers */
+.tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Ghost button glass */
+.btn-ghost-glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-color: var(--glass-brd);
+    box-shadow: var(--shadow-sm), var(--glass-hi);
+}
+.btn-ghost-glass:hover {
+    border-color: var(--color-border-warm-2);
+    box-shadow: var(--shadow-md), var(--glass-hi);
+}
+
+/* Export buttons */
+.exp-csv {
+    color: color-mix(in srgb, var(--color-h-green) 60%, var(--color-text-strong));
+    border-color: color-mix(in srgb, var(--color-h-green) 26%, var(--color-surface));
+    background: color-mix(in srgb, var(--color-h-green) 8%, var(--color-surface));
+}
+.exp-xml {
+    color: color-mix(in srgb, #ea580c 62%, var(--color-text-strong));
+    border-color: color-mix(in srgb, #ea580c 28%, var(--color-surface));
+    background: color-mix(in srgb, #ea580c 8%, var(--color-surface));
+}
+
+/* Table hover accent */
+.table-row-hover:hover td {
+    background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+}
+
+/* Animations */
+@keyframes fade {
+    from { opacity: 0; transform: translateY(-3px); }
+    to { opacity: 1; }
+}
+.animate-fade {
+    animation: fade 0.2s ease;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    font-size: 12.5px;
+    color: var(--color-text-dim);
+    border-top: 1px solid var(--color-border-warm);
+    margin-top: auto;
+    background: var(--color-surface);
+}
+.dark .site-footer {
+    color: #827c72;
+    border-top-color: #332f2a;
+    background: #201e1b;
+}
+.site-footer a {
+    font-weight: 600;
 }

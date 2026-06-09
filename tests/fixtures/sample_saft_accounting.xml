@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuditFile xmlns="urn:OECD:StandardAuditFile-Tax:PT_1.04_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <AuditFileVersion>1.04_01</AuditFileVersion>
+        <CompanyID>503876214</CompanyID>
+        <TaxRegistrationNumber>503876214</TaxRegistrationNumber>
+        <TaxAccountingBasis>C</TaxAccountingBasis>
+        <CompanyName>Lusitania Contabilidade, Lda</CompanyName>
+        <BusinessName>Lusitania Contabilidade</BusinessName>
+        <CompanyAddress>
+            <AddressDetail>Av. da Liberdade 45, 3o Dto</AddressDetail>
+            <City>Lisboa</City>
+            <PostalCode>1250-140</PostalCode>
+            <Country>PT</Country>
+        </CompanyAddress>
+        <FiscalYear>2026</FiscalYear>
+        <StartDate>2026-01-01</StartDate>
+        <EndDate>2026-06-30</EndDate>
+        <CurrencyCode>EUR</CurrencyCode>
+        <DateCreated>2026-06-09</DateCreated>
+        <TaxEntity>Global</TaxEntity>
+        <ProductCompanyTaxID>500000000</ProductCompanyTaxID>
+        <SoftwareCertificateNumber>1234</SoftwareCertificateNumber>
+        <ProductID>ContaPlus/5.2</ProductID>
+        <ProductVersion>5.2</ProductVersion>
+        <Telephone>211234567</Telephone>
+        <Email>contabilidade@lusitania.pt</Email>
+    </Header>
+    <MasterFiles>
+        <GeneralLedgerAccounts>
+            <TaxonomyReference>M</TaxonomyReference>
+            <!-- Classe 1 — Meios financeiros liquidos -->
+            <Account>
+                <AccountID>11</AccountID>
+                <AccountDescription>Caixa</AccountDescription>
+                <OpeningDebitBalance>5000.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>12350.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>1</GroupingCode>
+                <TaxonomyCode>1</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>12</AccountID>
+                <AccountDescription>Depositos a ordem</AccountDescription>
+                <OpeningDebitBalance>25000.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>38450.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>1</GroupingCode>
+                <TaxonomyCode>2</TaxonomyCode>
+            </Account>
+            <!-- Classe 2 — Contas a receber e a pagar -->
+            <Account>
+                <AccountID>211</AccountID>
+                <AccountDescription>Clientes c/c</AccountDescription>
+                <OpeningDebitBalance>12000.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>18750.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>2</GroupingCode>
+                <TaxonomyCode>5</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>221</AccountID>
+                <AccountDescription>Fornecedores c/c</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>8500.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>14230.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>2</GroupingCode>
+                <TaxonomyCode>9</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>231</AccountID>
+                <AccountDescription>Remuneracoes a pagar</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>4800.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>2</GroupingCode>
+                <TaxonomyCode>10</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>2432</AccountID>
+                <AccountDescription>IVA dedutivel</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>2415.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>24</GroupingCode>
+                <TaxonomyCode>12</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>2433</AccountID>
+                <AccountDescription>IVA liquidado</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>5980.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>24</GroupingCode>
+                <TaxonomyCode>13</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>245</AccountID>
+                <AccountDescription>Contribuicoes para Seg. Social</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>1680.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>24</GroupingCode>
+                <TaxonomyCode>14</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>241</AccountID>
+                <AccountDescription>Imposto sobre rendimento</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>850.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>24</GroupingCode>
+                <TaxonomyCode>11</TaxonomyCode>
+            </Account>
+            <!-- Classe 3 — Inventarios e ativos biologicos -->
+            <Account>
+                <AccountID>31</AccountID>
+                <AccountDescription>Compras de mercadorias</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>10500.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>3</GroupingCode>
+                <TaxonomyCode>15</TaxonomyCode>
+            </Account>
+            <!-- Classe 4 — Investimentos -->
+            <Account>
+                <AccountID>43</AccountID>
+                <AccountDescription>Ativos fixos tangiveis</AccountDescription>
+                <OpeningDebitBalance>15000.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>18250.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>4</GroupingCode>
+                <TaxonomyCode>18</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>438</AccountID>
+                <AccountDescription>Depreciacao acumulada</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>3000.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>4500.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>4</GroupingCode>
+                <TaxonomyCode>19</TaxonomyCode>
+            </Account>
+            <!-- Classe 5 — Capital proprio -->
+            <Account>
+                <AccountID>51</AccountID>
+                <AccountDescription>Capital subscrito</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>25000.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>25000.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>5</GroupingCode>
+                <TaxonomyCode>22</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>56</AccountID>
+                <AccountDescription>Resultados transitados</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>8200.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>8200.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>5</GroupingCode>
+                <TaxonomyCode>25</TaxonomyCode>
+            </Account>
+            <!-- Classe 6 — Gastos -->
+            <Account>
+                <AccountID>61</AccountID>
+                <AccountDescription>CMVMC</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>8400.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>6</GroupingCode>
+                <TaxonomyCode>26</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>62</AccountID>
+                <AccountDescription>Fornecimentos e servicos externos</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>3200.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>6</GroupingCode>
+                <TaxonomyCode>27</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>63</AccountID>
+                <AccountDescription>Gastos com pessoal</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>7200.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>6</GroupingCode>
+                <TaxonomyCode>28</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>64</AccountID>
+                <AccountDescription>Gastos de depreciacao e amortizacao</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>1500.00</ClosingDebitBalance>
+                <ClosingCreditBalance>0.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>6</GroupingCode>
+                <TaxonomyCode>30</TaxonomyCode>
+            </Account>
+            <!-- Classe 7 — Rendimentos -->
+            <Account>
+                <AccountID>71</AccountID>
+                <AccountDescription>Vendas de mercadorias</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>22000.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>7</GroupingCode>
+                <TaxonomyCode>35</TaxonomyCode>
+            </Account>
+            <Account>
+                <AccountID>72</AccountID>
+                <AccountDescription>Prestacao de servicos</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>4000.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>7</GroupingCode>
+                <TaxonomyCode>36</TaxonomyCode>
+            </Account>
+            <!-- Classe 8 — Resultados -->
+            <Account>
+                <AccountID>81</AccountID>
+                <AccountDescription>Resultado liquido do periodo</AccountDescription>
+                <OpeningDebitBalance>0.00</OpeningDebitBalance>
+                <OpeningCreditBalance>0.00</OpeningCreditBalance>
+                <ClosingDebitBalance>0.00</ClosingDebitBalance>
+                <ClosingCreditBalance>5700.00</ClosingCreditBalance>
+                <GroupingCategory>GM</GroupingCategory>
+                <GroupingCode>8</GroupingCode>
+                <TaxonomyCode>40</TaxonomyCode>
+            </Account>
+        </GeneralLedgerAccounts>
+        <Customer>
+            <CustomerID>C001</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>509123456</CustomerTaxID>
+            <CompanyName>Padaria Central, Lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Rua do Comercio 12</AddressDetail>
+                <City>Porto</City>
+                <PostalCode>4000-100</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C002</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>510987654</CustomerTaxID>
+            <CompanyName>Restaurante Beira Rio, SA</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Av. Marginal 88</AddressDetail>
+                <City>Cascais</City>
+                <PostalCode>2750-300</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C003</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>511222333</CustomerTaxID>
+            <CompanyName>Hotel Miramar, Lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Praca da Republica 5</AddressDetail>
+                <City>Faro</City>
+                <PostalCode>8000-078</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C004</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>999999990</CustomerTaxID>
+            <CompanyName>Consumidor Final</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Desconhecido</AddressDetail>
+                <City>Desconhecido</City>
+                <PostalCode>0000-000</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Supplier>
+            <SupplierID>F001</SupplierID>
+            <AccountID>221</AccountID>
+            <SupplierTaxID>501234567</SupplierTaxID>
+            <CompanyName>Distribuidora Norte, SA</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Zona Industrial Maia, Lote 5</AddressDetail>
+                <City>Maia</City>
+                <PostalCode>4470-100</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Supplier>
+        <Supplier>
+            <SupplierID>F002</SupplierID>
+            <AccountID>221</AccountID>
+            <SupplierTaxID>502345678</SupplierTaxID>
+            <CompanyName>Transportes Rapidos do Sul, Lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Rua Industrial 34</AddressDetail>
+                <City>Setubal</City>
+                <PostalCode>2900-100</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Supplier>
+        <Supplier>
+            <SupplierID>F003</SupplierID>
+            <AccountID>221</AccountID>
+            <SupplierTaxID>503456789</SupplierTaxID>
+            <CompanyName>EDP Servico Universal, SA</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Av. da Energia 1</AddressDetail>
+                <City>Lisboa</City>
+                <PostalCode>1200-001</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Supplier>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC001</ProductCode>
+            <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+            <ProductNumberCode>5601234000001</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC002</ProductCode>
+            <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+            <ProductNumberCode>5601234000002</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC003</ProductCode>
+            <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+            <ProductNumberCode>5601234000003</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>S</ProductType>
+            <ProductCode>SRV001</ProductCode>
+            <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+            <ProductNumberCode>SRV001</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>S</ProductType>
+            <ProductCode>SRV002</ProductCode>
+            <ProductDescription>Servico de entrega</ProductDescription>
+            <ProductNumberCode>SRV002</ProductNumberCode>
+        </Product>
+        <TaxTable>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>NOR</TaxCode>
+                <Description>IVA taxa normal</Description>
+                <TaxPercentage>23</TaxPercentage>
+            </TaxTableEntry>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>INT</TaxCode>
+                <Description>IVA taxa intermedia</Description>
+                <TaxPercentage>13</TaxPercentage>
+            </TaxTableEntry>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>RED</TaxCode>
+                <Description>IVA taxa reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </TaxTableEntry>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>ISE</TaxCode>
+                <Description>IVA isento</Description>
+                <TaxPercentage>0</TaxPercentage>
+            </TaxTableEntry>
+        </TaxTable>
+    </MasterFiles>
+    <SourceDocuments>
+        <SalesInvoices>
+            <NumberOfEntries>5</NumberOfEntries>
+            <TotalDebit>0.00</TotalDebit>
+            <TotalCredit>31980.00</TotalCredit>
+            <Invoice>
+                <InvoiceNo>FT 2026/0001</InvoiceNo>
+                <ATCUD>WXYZ1234-1</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-01-15T10:30:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0u</Hash>
+                <HashControl>1</HashControl>
+                <Period>01</Period>
+                <InvoiceDate>2026-01-15</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-01-15T10:30:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>40</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>125.00</UnitPrice>
+                    <CreditAmount>5000.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>1150.00</TaxPayable>
+                    <NetTotal>5000.00</NetTotal>
+                    <GrossTotal>6150.00</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <Invoice>
+                <InvoiceNo>FT 2026/0002</InvoiceNo>
+                <ATCUD>WXYZ1234-2</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-02-10T14:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>bC2dE3fG4hI5jK6lM7nO8pQ9rS0tU1v</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <InvoiceDate>2026-02-10</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-10T14:00:00</SystemEntryDate>
+                <CustomerID>C002</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC002</ProductCode>
+                    <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+                    <Quantity>50</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>24.90</UnitPrice>
+                    <CreditAmount>1245.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC003</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>100</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>1850.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>3</LineNumber>
+                    <ProductCode>SRV002</ProductCode>
+                    <ProductDescription>Servico de entrega</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>150.00</UnitPrice>
+                    <CreditAmount>150.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>349.70</TaxPayable>
+                    <NetTotal>3245.00</NetTotal>
+                    <GrossTotal>3594.70</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <Invoice>
+                <InvoiceNo>FT 2026/0003</InvoiceNo>
+                <ATCUD>WXYZ1234-3</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-03-20T09:45:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>cD3eF4gH5iJ6kL7mN8oP9qR0sT1uV2w</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <InvoiceDate>2026-03-20</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-20T09:45:00</SystemEntryDate>
+                <CustomerID>C003</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>80</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>125.00</UnitPrice>
+                    <CreditAmount>10000.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>2300.00</TaxPayable>
+                    <NetTotal>10000.00</NetTotal>
+                    <GrossTotal>12300.00</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <Invoice>
+                <InvoiceNo>FT 2026/0004</InvoiceNo>
+                <ATCUD>WXYZ1234-4</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-02-28T16:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3x</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <InvoiceDate>2026-02-28</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-28T16:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>SRV001</ProductCode>
+                    <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>4000.00</UnitPrice>
+                    <CreditAmount>4000.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>920.00</TaxPayable>
+                    <NetTotal>4000.00</NetTotal>
+                    <GrossTotal>4920.00</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <Invoice>
+                <InvoiceNo>FS 2026/0001</InvoiceNo>
+                <ATCUD>WXYZ1234-5</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-04-05T11:00:00</InvoiceStatusDate>
+                    <SourceID>pos01</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4y</Hash>
+                <HashControl>1</HashControl>
+                <Period>04</Period>
+                <InvoiceDate>2026-04-05</InvoiceDate>
+                <InvoiceType>FS</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>pos01</SourceID>
+                <SystemEntryDate>2026-04-05T11:00:00</SystemEntryDate>
+                <CustomerID>C004</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC003</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>3</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>19.90</UnitPrice>
+                    <CreditAmount>59.70</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>7.76</TaxPayable>
+                    <NetTotal>59.70</NetTotal>
+                    <GrossTotal>67.46</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+        </SalesInvoices>
+        <Payments>
+            <NumberOfEntries>2</NumberOfEntries>
+            <TotalDebit>0.00</TotalDebit>
+            <TotalCredit>14760.00</TotalCredit>
+            <Payment>
+                <PaymentRefNo>RC 2026/0001</PaymentRefNo>
+                <ATCUD>RCPT5678-1</ATCUD>
+                <Period>02</Period>
+                <TransactionID>RC 2026/0001</TransactionID>
+                <TransactionDate>2026-02-05</TransactionDate>
+                <PaymentType>RG</PaymentType>
+                <DocumentStatus>
+                    <PaymentStatus>N</PaymentStatus>
+                    <PaymentStatusDate>2026-02-05T09:00:00</PaymentStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourcePayment>P</SourcePayment>
+                </DocumentStatus>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-05T09:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <SourceDocumentID>
+                        <OriginatingON>FT 2026/0001</OriginatingON>
+                        <InvoiceDate>2026-01-15</InvoiceDate>
+                    </SourceDocumentID>
+                    <CreditAmount>6150.00</CreditAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>6150.00</NetTotal>
+                    <GrossTotal>6150.00</GrossTotal>
+                </DocumentTotals>
+                <PaymentMethod>
+                    <PaymentMechanism>TB</PaymentMechanism>
+                    <PaymentAmount>6150.00</PaymentAmount>
+                    <PaymentDate>2026-02-05</PaymentDate>
+                </PaymentMethod>
+            </Payment>
+            <Payment>
+                <PaymentRefNo>RC 2026/0002</PaymentRefNo>
+                <ATCUD>RCPT5678-2</ATCUD>
+                <Period>03</Period>
+                <TransactionID>RC 2026/0002</TransactionID>
+                <TransactionDate>2026-03-10</TransactionDate>
+                <PaymentType>RG</PaymentType>
+                <DocumentStatus>
+                    <PaymentStatus>N</PaymentStatus>
+                    <PaymentStatusDate>2026-03-10T11:30:00</PaymentStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourcePayment>P</SourcePayment>
+                </DocumentStatus>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-10T11:30:00</SystemEntryDate>
+                <CustomerID>C002</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <SourceDocumentID>
+                        <OriginatingON>FT 2026/0002</OriginatingON>
+                        <InvoiceDate>2026-02-10</InvoiceDate>
+                    </SourceDocumentID>
+                    <CreditAmount>8610.00</CreditAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>8610.00</NetTotal>
+                    <GrossTotal>8610.00</GrossTotal>
+                </DocumentTotals>
+                <PaymentMethod>
+                    <PaymentMechanism>CC</PaymentMechanism>
+                    <PaymentAmount>8610.00</PaymentAmount>
+                    <PaymentDate>2026-03-10</PaymentDate>
+                </PaymentMethod>
+            </Payment>
+        </Payments>
+        <WorkingDocuments>
+            <NumberOfEntries>2</NumberOfEntries>
+            <TotalDebit>0.00</TotalDebit>
+            <TotalCredit>5250.00</TotalCredit>
+            <WorkDocument>
+                <DocumentNumber>OR 2026/0001</DocumentNumber>
+                <ATCUD>ORCM1234-1</ATCUD>
+                <DocumentStatus>
+                    <WorkStatus>N</WorkStatus>
+                    <WorkStatusDate>2026-01-10T09:00:00</WorkStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>oR1cM2eN3tO4pQ5rS6tU7vW8xY9zA0b</Hash>
+                <HashControl>1</HashControl>
+                <Period>01</Period>
+                <WorkDate>2026-01-10</WorkDate>
+                <WorkType>OR</WorkType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-01-10T09:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>40</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>125.00</UnitPrice>
+                    <CreditAmount>5000.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>1150.00</TaxPayable>
+                    <NetTotal>5000.00</NetTotal>
+                    <GrossTotal>6150.00</GrossTotal>
+                </DocumentTotals>
+            </WorkDocument>
+            <WorkDocument>
+                <DocumentNumber>PP 2026/0001</DocumentNumber>
+                <ATCUD>PPRF1234-1</ATCUD>
+                <DocumentStatus>
+                    <WorkStatus>N</WorkStatus>
+                    <WorkStatusDate>2026-03-15T14:00:00</WorkStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>pP1rF2oR3mA4tI5vO6sE7cU8rA9nC0e</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <WorkDate>2026-03-15</WorkDate>
+                <WorkType>PP</WorkType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-15T14:00:00</SystemEntryDate>
+                <CustomerID>C003</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>SRV001</ProductCode>
+                    <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>250.00</UnitPrice>
+                    <CreditAmount>250.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>ISE</TaxCode>
+                        <TaxPercentage>0</TaxPercentage>
+                    </Tax>
+                    <TaxExemptionReason>M30 - Isencao art 9o CIVA</TaxExemptionReason>
+                    <TaxExemptionCode>M30</TaxExemptionCode>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>250.00</NetTotal>
+                    <GrossTotal>250.00</GrossTotal>
+                </DocumentTotals>
+            </WorkDocument>
+        </WorkingDocuments>
+        <MovementOfGoods>
+            <NumberOfEntries>1</NumberOfEntries>
+            <TotalQuantityIssued>80.00</TotalQuantityIssued>
+            <StockMovement>
+                <DocumentNumber>GT 2026/0001</DocumentNumber>
+                <ATCUD>GTMV1234-1</ATCUD>
+                <DocumentStatus>
+                    <MovementStatus>N</MovementStatus>
+                    <MovementStatusDate>2026-03-19T08:00:00</MovementStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>M</SourceBilling>
+                </DocumentStatus>
+                <Hash>gT1mV2oI3cE4mE5nT6oO7fG8oO9dS0a</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <MovementDate>2026-03-19</MovementDate>
+                <MovementType>GT</MovementType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-19T08:00:00</SystemEntryDate>
+                <CustomerID>C003</CustomerID>
+                <ShipTo>
+                    <DeliveryDate>2026-03-20</DeliveryDate>
+                    <Address>
+                        <AddressDetail>Praca da Republica 5</AddressDetail>
+                        <City>Faro</City>
+                        <PostalCode>8000-078</PostalCode>
+                        <Country>PT</Country>
+                    </Address>
+                </ShipTo>
+                <ShipFrom>
+                    <DeliveryDate>2026-03-19</DeliveryDate>
+                    <Address>
+                        <AddressDetail>Av. da Liberdade 45</AddressDetail>
+                        <City>Lisboa</City>
+                        <PostalCode>1250-140</PostalCode>
+                        <Country>PT</Country>
+                    </Address>
+                </ShipFrom>
+                <MovementStartTime>2026-03-19T08:30:00</MovementStartTime>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>80</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>125.00</UnitPrice>
+                    <CreditAmount>10000.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>2300.00</TaxPayable>
+                    <NetTotal>10000.00</NetTotal>
+                    <GrossTotal>12300.00</GrossTotal>
+                </DocumentTotals>
+            </StockMovement>
+        </MovementOfGoods>
+    </SourceDocuments>
+    <GeneralLedgerEntries>
+        <NumberOfEntries>10</NumberOfEntries>
+        <TotalDebit>67675.00</TotalDebit>
+        <TotalCredit>67675.00</TotalCredit>
+        <!-- Diario 01 — Vendas -->
+        <Journal>
+            <JournalID>01</JournalID>
+            <Description>Diario de vendas</Description>
+            <!-- Venda 1: Padaria Central -->
+            <Transaction>
+                <TransactionID>01 2026/00001</TransactionID>
+                <Period>1</Period>
+                <TransactionDate>2026-01-15</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Venda de mercadorias — Padaria Central</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-01-15T10:30:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>211</AccountID>
+                        <SourceDocumentID>FT 2026/0001</SourceDocumentID>
+                        <Description>Cliente Padaria Central</Description>
+                        <DebitAmount>6150.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>71</AccountID>
+                        <SourceDocumentID>FT 2026/0001</SourceDocumentID>
+                        <Description>Vendas de mercadorias</Description>
+                        <CreditAmount>5000.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>2433</AccountID>
+                        <SourceDocumentID>FT 2026/0001</SourceDocumentID>
+                        <Description>IVA liquidado 23%</Description>
+                        <CreditAmount>1150.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+            <!-- Venda 2: Restaurante Beira Rio -->
+            <Transaction>
+                <TransactionID>01 2026/00002</TransactionID>
+                <Period>2</Period>
+                <TransactionDate>2026-02-10</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Venda de mercadorias — Restaurante Beira Rio</Description>
+                <DocArchivalNumber>2</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-02-10T14:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>211</AccountID>
+                        <SourceDocumentID>FT 2026/0002</SourceDocumentID>
+                        <Description>Cliente Restaurante Beira Rio</Description>
+                        <DebitAmount>8610.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>71</AccountID>
+                        <SourceDocumentID>FT 2026/0002</SourceDocumentID>
+                        <Description>Vendas de mercadorias</Description>
+                        <CreditAmount>7000.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>2433</AccountID>
+                        <SourceDocumentID>FT 2026/0002</SourceDocumentID>
+                        <Description>IVA liquidado 23%</Description>
+                        <CreditAmount>1610.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+            <!-- Venda 3: Hotel Miramar -->
+            <Transaction>
+                <TransactionID>01 2026/00003</TransactionID>
+                <Period>3</Period>
+                <TransactionDate>2026-03-20</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Venda de mercadorias — Hotel Miramar</Description>
+                <DocArchivalNumber>3</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-03-20T09:45:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>211</AccountID>
+                        <SourceDocumentID>FT 2026/0003</SourceDocumentID>
+                        <Description>Cliente Hotel Miramar</Description>
+                        <DebitAmount>12300.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>71</AccountID>
+                        <SourceDocumentID>FT 2026/0003</SourceDocumentID>
+                        <Description>Vendas de mercadorias</Description>
+                        <CreditAmount>10000.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>2433</AccountID>
+                        <SourceDocumentID>FT 2026/0003</SourceDocumentID>
+                        <Description>IVA liquidado 23%</Description>
+                        <CreditAmount>2300.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+        </Journal>
+        <!-- Diario 02 — Prestacao de servicos -->
+        <Journal>
+            <JournalID>02</JournalID>
+            <Description>Diario de servicos</Description>
+            <Transaction>
+                <TransactionID>02 2026/00001</TransactionID>
+                <Period>2</Period>
+                <TransactionDate>2026-02-28</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Consultoria alimentar — Padaria Central</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-02-28T16:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>211</AccountID>
+                        <SourceDocumentID>FT 2026/0004</SourceDocumentID>
+                        <Description>Cliente Padaria Central — consultoria</Description>
+                        <DebitAmount>4920.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>72</AccountID>
+                        <SourceDocumentID>FT 2026/0004</SourceDocumentID>
+                        <Description>Prestacao de servicos</Description>
+                        <CreditAmount>4000.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>2433</AccountID>
+                        <SourceDocumentID>FT 2026/0004</SourceDocumentID>
+                        <Description>IVA liquidado 23%</Description>
+                        <CreditAmount>920.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+        </Journal>
+        <!-- Diario 03 — Compras -->
+        <Journal>
+            <JournalID>03</JournalID>
+            <Description>Diario de compras</Description>
+            <!-- Compra 1: Distribuidora Norte -->
+            <Transaction>
+                <TransactionID>03 2026/00001</TransactionID>
+                <Period>1</Period>
+                <TransactionDate>2026-01-20</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Compra de mercadorias — Distribuidora Norte</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-01-20T14:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>31</AccountID>
+                        <SourceDocumentID>VFA 2026/0042</SourceDocumentID>
+                        <Description>Compra farinha T65</Description>
+                        <DebitAmount>4500.00</DebitAmount>
+                    </DebitLine>
+                    <DebitLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>2432</AccountID>
+                        <SourceDocumentID>VFA 2026/0042</SourceDocumentID>
+                        <Description>IVA dedutivel 23%</Description>
+                        <DebitAmount>1035.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>221</AccountID>
+                        <SourceDocumentID>VFA 2026/0042</SourceDocumentID>
+                        <Description>Fornecedor Distribuidora Norte</Description>
+                        <CreditAmount>5535.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+            <!-- Compra 2: mais mercadorias -->
+            <Transaction>
+                <TransactionID>03 2026/00002</TransactionID>
+                <Period>3</Period>
+                <TransactionDate>2026-03-05</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Compra de mercadorias — Distribuidora Norte (azeite e cafe)</Description>
+                <DocArchivalNumber>2</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-03-05T10:15:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>31</AccountID>
+                        <SourceDocumentID>VFA 2026/0078</SourceDocumentID>
+                        <Description>Compra azeite e cafe</Description>
+                        <DebitAmount>6000.00</DebitAmount>
+                    </DebitLine>
+                    <DebitLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>2432</AccountID>
+                        <SourceDocumentID>VFA 2026/0078</SourceDocumentID>
+                        <Description>IVA dedutivel 23%</Description>
+                        <DebitAmount>1380.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>221</AccountID>
+                        <SourceDocumentID>VFA 2026/0078</SourceDocumentID>
+                        <Description>Fornecedor Distribuidora Norte</Description>
+                        <CreditAmount>7380.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+        </Journal>
+        <!-- Diario 04 — Recebimentos -->
+        <Journal>
+            <JournalID>04</JournalID>
+            <Description>Diario de recebimentos</Description>
+            <!-- Recebimento Padaria Central -->
+            <Transaction>
+                <TransactionID>04 2026/00001</TransactionID>
+                <Period>2</Period>
+                <TransactionDate>2026-02-05</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Recebimento — Padaria Central (FT 2026/0001)</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-02-05T09:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>12</AccountID>
+                        <SourceDocumentID>RC 2026/0001</SourceDocumentID>
+                        <Description>Deposito bancario — recebimento</Description>
+                        <DebitAmount>6150.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>211</AccountID>
+                        <SourceDocumentID>RC 2026/0001</SourceDocumentID>
+                        <Description>Liquidacao conta cliente</Description>
+                        <CreditAmount>6150.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+            <!-- Recebimento Restaurante Beira Rio -->
+            <Transaction>
+                <TransactionID>04 2026/00002</TransactionID>
+                <Period>3</Period>
+                <TransactionDate>2026-03-10</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Recebimento — Restaurante Beira Rio (FT 2026/0002)</Description>
+                <DocArchivalNumber>2</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-03-10T11:30:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>12</AccountID>
+                        <SourceDocumentID>RC 2026/0002</SourceDocumentID>
+                        <Description>Deposito bancario — recebimento</Description>
+                        <DebitAmount>8610.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>211</AccountID>
+                        <SourceDocumentID>RC 2026/0002</SourceDocumentID>
+                        <Description>Liquidacao conta cliente</Description>
+                        <CreditAmount>8610.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+        </Journal>
+        <!-- Diario 05 — Diversos / Operacoes diversas -->
+        <Journal>
+            <JournalID>05</JournalID>
+            <Description>Diario de operacoes diversas</Description>
+            <!-- Salarios -->
+            <Transaction>
+                <TransactionID>05 2026/00001</TransactionID>
+                <Period>1</Period>
+                <TransactionDate>2026-01-31</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Processamento salarios janeiro</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-01-31T17:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>63</AccountID>
+                        <Description>Gastos com pessoal — jan</Description>
+                        <DebitAmount>3600.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>231</AccountID>
+                        <Description>Remuneracoes a pagar — jan</Description>
+                        <CreditAmount>2400.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>245</AccountID>
+                        <Description>Seg Social a pagar — jan</Description>
+                        <CreditAmount>840.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>4</RecordID>
+                        <AccountID>241</AccountID>
+                        <Description>IRS retido — jan</Description>
+                        <CreditAmount>360.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+            <!-- Salarios fevereiro -->
+            <Transaction>
+                <TransactionID>05 2026/00002</TransactionID>
+                <Period>2</Period>
+                <TransactionDate>2026-02-28</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Processamento salarios fevereiro</Description>
+                <DocArchivalNumber>2</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-02-28T17:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>63</AccountID>
+                        <Description>Gastos com pessoal — fev</Description>
+                        <DebitAmount>3600.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>231</AccountID>
+                        <Description>Remuneracoes a pagar — fev</Description>
+                        <CreditAmount>2400.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>3</RecordID>
+                        <AccountID>245</AccountID>
+                        <Description>Seg Social a pagar — fev</Description>
+                        <CreditAmount>840.00</CreditAmount>
+                    </CreditLine>
+                    <CreditLine>
+                        <RecordID>4</RecordID>
+                        <AccountID>241</AccountID>
+                        <Description>IRS retido — fev</Description>
+                        <CreditAmount>360.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+        </Journal>
+        <!-- Diario 06 — Depreciacao -->
+        <Journal>
+            <JournalID>06</JournalID>
+            <Description>Diario de depreciacao</Description>
+            <Transaction>
+                <TransactionID>06 2026/00001</TransactionID>
+                <Period>3</Period>
+                <TransactionDate>2026-03-31</TransactionDate>
+                <SourceID>admin</SourceID>
+                <Description>Depreciacao trimestral — ativos fixos</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <SystemEntryDate>2026-03-31T18:00:00</SystemEntryDate>
+                <Lines>
+                    <DebitLine>
+                        <RecordID>1</RecordID>
+                        <AccountID>64</AccountID>
+                        <Description>Gastos de depreciacao Q1</Description>
+                        <DebitAmount>1500.00</DebitAmount>
+                    </DebitLine>
+                    <CreditLine>
+                        <RecordID>2</RecordID>
+                        <AccountID>438</AccountID>
+                        <Description>Depreciacao acumulada Q1</Description>
+                        <CreditAmount>1500.00</CreditAmount>
+                    </CreditLine>
+                </Lines>
+            </Transaction>
+        </Journal>
+    </GeneralLedgerEntries>
+</AuditFile>

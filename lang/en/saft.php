@@ -5,17 +5,31 @@ return [
     'app_name' => 'SAFT Checker',
     'subtitle' => 'SAFT-PT Validator',
     'footer' => 'SAFT Checker — SAFT-PT file validator for Portuguese tax compliance',
+    'footer_created_by' => 'Created by Henrique Vasconcelos',
 
     // Upload
-    'upload_title' => 'Validate SAFT-PT file',
-    'upload_description' => 'Upload your SAFT-PT file to check compliance with Portuguese tax legislation.',
-    'upload_drag' => 'Drag your SAFT-PT file here',
+    'upload_title' => 'Validate your SAF-T (PT) file',
+    'upload_description' => 'Upload your billing XML file. We verify compliance with Portuguese tax rules and organise all data into tables.',
+    'upload_drag' => 'Drag your file here',
     'upload_or' => 'or',
-    'upload_select' => 'Select XML file',
+    'upload_select' => 'Browse file',
     'upload_select_another' => 'Choose another file',
     'upload_ready' => 'File ready for validation',
-    'upload_validate' => 'Validate SAFT-PT',
+    'upload_validate' => 'Validate SAF-T',
     'upload_validating' => 'Validating...',
+    'upload_type_question' => 'What type of SAF-T file will you validate?',
+    'type_billing' => 'Billing',
+    'type_billing_desc' => 'Invoices, customers, products, receipts and transport documents.',
+    'type_accounting' => 'Accounting',
+    'type_accounting_desc' => 'Chart of accounts, journal entries and general ledger movements.',
+    'upload_use_sample' => 'Use a sample file',
+    'upload_hint' => '.xml files up to 50 MB · SAF-T (PT) v1.04_01',
+    'feat1_title' => 'Tax validation',
+    'feat1_body' => 'Document sequence, digital signatures, tax IDs and totals checked automatically.',
+    'feat2_title' => 'Organised data',
+    'feat2_body' => 'Customers, products, invoices and receipts in sortable, searchable tables.',
+    'feat3_title' => 'Export',
+    'feat3_body' => 'Export any section as CSV or XML, or the whole file in one click.',
     'upload_error_xml' => 'The file must be an XML.',
     'upload_error_required' => 'Please select a SAFT-PT file.',
     'upload_error_max' => 'The file cannot exceed 200MB.',
@@ -23,15 +37,22 @@ return [
 
     // Results
     'results_title' => 'Validation Result',
-    'results_new' => 'New validation',
+    'results_new' => 'New file',
     'results_file' => 'File',
     'results_status' => 'Status',
-    'results_valid' => 'Valid',
-    'results_invalid' => 'Has errors',
+    'results_valid' => 'File is valid',
+    'results_invalid' => 'Errors found',
     'results_errors' => 'Errors',
     'results_warnings' => 'Warnings',
     'results_info' => 'Information',
+    'results_total' => 'Total',
     'results_no_issues' => 'No issues detected in the file.',
+    'results_fix_before_submit' => 'Fix the errors before submitting to the Tax Authority.',
+    'results_occurrences' => 'Validation occurrences',
+    'results_records' => 'records',
+    'results_error_label' => 'Error',
+    'results_warning_label' => 'Warning',
+    'results_info_label' => 'Info',
     'results_field' => 'Field',
     'results_xml_line' => 'XML Line',
 
@@ -49,10 +70,15 @@ return [
     'data_payments' => 'Payments',
     'data_movements' => 'Transport',
     'data_working_docs' => 'Working Docs',
+    'data_accounts' => 'Chart of Accounts',
+    'data_ledger_entries' => 'Ledger Entries',
+
+    // Search
+    'search_placeholder' => 'Search...',
 
     // Export
     'export_section' => 'Export current section',
-    'export_all' => 'Export all (CSV)',
+    'export_all' => 'Export all',
 
     // Header fields
     'header_title' => 'Header Information',
@@ -79,6 +105,13 @@ return [
     'header_city' => 'City',
     'header_postal_code' => 'Postal Code',
     'header_country' => 'Country',
+    'header_taxonomy_ref' => 'Taxonomy',
+    'tax_basis_f' => 'Billing',
+    'tax_basis_c' => 'Accounting',
+    'tax_basis_i' => 'Integrated',
+    'tax_basis_s' => 'Self-billing',
+    'tax_basis_e' => 'Third-party billing',
+    'tax_basis_p' => 'Partial billing',
 
     // Table columns
     'col_id' => 'ID',
@@ -114,6 +147,49 @@ return [
     'col_amount' => 'Amount',
     'col_exemption' => 'Exemption',
 
+    // Header fields - accounting
+    'header_accounts_title' => 'Chart of Accounts',
+    'header_ledger_title' => 'General Ledger Entries',
+
+    // Table columns - accounting
+    'col_account_id' => 'Account',
+    'col_account_description' => 'Description',
+    'col_opening_debit' => 'Opening Debit',
+    'col_opening_credit' => 'Opening Credit',
+    'col_closing_debit' => 'Closing Debit',
+    'col_closing_credit' => 'Closing Credit',
+    'col_grouping_category' => 'Category',
+    'col_grouping_code' => 'Grouping Code',
+    'col_taxonomy_code' => 'Taxonomy',
+    'col_journal' => 'Journal',
+    'col_journal_desc' => 'Journal Desc.',
+    'col_transaction_id' => 'Transaction',
+    'col_period' => 'Period',
+    'col_transaction_type' => 'Type',
+    'col_source_id' => 'User',
+    'col_doc_archival' => 'Archive No.',
+    'col_debit' => 'Debit',
+    'col_credit' => 'Credit',
+    'col_record_id' => 'Record',
+    'col_source_doc' => 'Source Doc.',
+
+    // Transaction types
+    'transaction_type_N' => 'Normal',
+    'transaction_type_R' => 'Regularisation',
+    'transaction_type_A' => 'Settlement',
+    'transaction_type_J' => 'Adjustment',
+
+    // Grouping categories
+    'grouping_GR' => '1st Level General',
+    'grouping_GA' => 'Grouping General',
+    'grouping_GM' => 'Movement General',
+    'grouping_AR' => '1st Level Analytical',
+    'grouping_AA' => 'Grouping Analytical',
+    'grouping_AM' => 'Movement Analytical',
+
+    // Transaction lines
+    'transaction_lines' => 'Transaction Lines',
+
     // Invoice lines
     'invoice_lines' => 'Invoice Lines',
 
@@ -140,9 +216,60 @@ return [
     'empty_payments' => 'No payments',
     'empty_movements' => 'No transport documents',
     'empty_working_docs' => 'No working documents',
+    'empty_accounts' => 'No accounts in chart',
+    'empty_ledger_entries' => 'No ledger entries',
 
     // Theme
     'theme_light' => 'Light mode',
     'theme_dark' => 'Dark mode',
     'language' => 'Language',
+
+    // GDPR / Privacy
+    'privacy_link' => 'Privacy Policy',
+    'gdpr_notice' => 'Your file is processed locally on the server and deleted immediately after validation. No data is stored, shared with third parties, or used for any other purpose. Learn more in our',
+    'gdpr_secure_line' => 'Processed locally · no data is stored',
+    'cookie_banner_text' => 'This site uses only strictly necessary cookies for functionality (session, CSRF security, and theme preferences). We do not use tracking or analytics cookies. More information in our',
+    'cookie_accept' => 'Got it',
+
+    'privacy_title' => 'Privacy Policy',
+    'privacy_last_updated' => 'Last updated',
+    'privacy_back' => 'Back to home',
+
+    'privacy_what_title' => '1. What we do',
+    'privacy_what_text' => 'SAFT Checker is a SAFT-PT file validation tool. The user uploads an XML file, which is analysed to verify compliance with Portuguese tax legislation. All analysis is performed in real-time on the server.',
+
+    'privacy_data_title' => '2. Personal data processed',
+    'privacy_data_text' => 'SAFT-PT files may contain personal data of third parties, including:',
+    'privacy_data_nif' => 'Tax Identification Numbers (NIF) of customers and suppliers',
+    'privacy_data_names' => 'Company and individual names',
+    'privacy_data_addresses' => 'Addresses, postal codes, cities',
+    'privacy_data_financial' => 'Financial amounts (invoices, payments, ledger entries)',
+
+    'privacy_storage_title' => '3. Data storage and retention',
+    'privacy_storage_text' => 'We ensure the protection of your data:',
+    'privacy_storage_no_db' => 'No SAFT file data is stored in any database',
+    'privacy_storage_no_persist' => 'The XML file is not permanently stored on the server',
+    'privacy_storage_temp' => 'Temporary files are deleted immediately after processing',
+    'privacy_storage_no_third' => 'No data is transmitted to third parties, analytics services, or external platforms',
+
+    'privacy_legal_title' => '4. Legal basis',
+    'privacy_legal_text' => 'Data processing is based on the user\'s consent (Art. 6.1.a GDPR), expressed through the voluntary act of uploading the file for validation. As the user is the data controller for the data contained in the SAFT-PT file, using this tool constitutes processing at their own initiative.',
+
+    'privacy_cookies_title' => '5. Cookies',
+    'privacy_cookies_text' => 'We use only strictly necessary cookies for the site to function. We do not use tracking, analytics, or advertising cookies.',
+    'privacy_cookie_purpose' => 'Purpose',
+    'privacy_cookie_duration' => 'Duration',
+    'privacy_cookie_session' => 'Browser session and language preference',
+    'privacy_cookie_csrf' => 'CSRF attack protection (security)',
+    'privacy_cookie_dark' => 'Light/dark theme preference (localStorage)',
+    'privacy_cookie_consent' => 'Cookie consent record (localStorage)',
+    'privacy_cookie_session_duration' => 'Browser session',
+    'privacy_cookie_persistent' => 'Persistent',
+    'privacy_cookie_1year' => '1 year',
+
+    'privacy_rights_title' => '6. Your rights',
+    'privacy_rights_text' => 'As we do not store personal data, the rights of access, rectification, erasure, and portability (Arts. 15-20 GDPR) are automatically fulfilled — there is no data to access, correct, or delete. If you have questions about data processing, please contact us.',
+
+    'privacy_contact_title' => '7. Contact',
+    'privacy_contact_text' => 'For questions related to data protection or this privacy policy, contact us through the project\'s GitHub repository.',
 ];

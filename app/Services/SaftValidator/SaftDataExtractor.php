@@ -19,7 +19,7 @@ class SaftDataExtractor
 
     public function extractAll(): array
     {
-        return [
+        $data = [
             'header' => $this->extractHeader(),
             'customers' => $this->extractCustomers(),
             'suppliers' => $this->extractSuppliers(),
@@ -29,7 +29,20 @@ class SaftDataExtractor
             'payments' => $this->extractPayments(),
             'movements' => $this->extractMovements(),
             'working_documents' => $this->extractWorkingDocuments(),
+            'general_ledger_accounts' => $this->extractGeneralLedgerAccounts(),
+            'general_ledger_entries' => $this->extractGeneralLedgerEntries(),
         ];
+
+        return $data;
+    }
+
+    /**
+     * Check if this SAFT file is an accounting type (Contabilidade or Integrada).
+     */
+    public function isAccountingSaft(): bool
+    {
+        $taxBasis = (string) ($this->xml->Header->TaxAccountingBasis ?? '');
+        return in_array($taxBasis, ['C', 'I']);
     }
 
     protected function extractHeader(): array
@@ -61,6 +74,7 @@ class SaftDataExtractor
             'City' => (string) ($h->CompanyAddress->City ?? ''),
             'PostalCode' => (string) ($h->CompanyAddress->PostalCode ?? ''),
             'Country' => (string) ($h->CompanyAddress->Country ?? ''),
+            'TaxonomyReference' => (string) ($this->xml->MasterFiles->GeneralLedgerAccounts->TaxonomyReference ?? ''),
         ];
     }
 
@@ -276,5 +290,75 @@ class SaftDataExtractor
             ];
         }
         return $docs;
+    }
+
+    protected function extractGeneralLedgerAccounts(): array
+    {
+        $accounts = [];
+        $mf = $this->xml->MasterFiles;
+        if (!$mf || !isset($mf->GeneralLedgerAccounts->Account)) return [];
+
+        foreach ($mf->GeneralLedgerAccounts->Account as $account) {
+            $accounts[] = [
+                'AccountID' => (string) ($account->AccountID ?? ''),
+                'AccountDescription' => (string) ($account->AccountDescription ?? ''),
+                'OpeningDebitBalance' => (string) ($account->OpeningDebitBalance ?? '0'),
+                'OpeningCreditBalance' => (string) ($account->OpeningCreditBalance ?? '0'),
+                'ClosingDebitBalance' => (string) ($account->ClosingDebitBalance ?? '0'),
+                'ClosingCreditBalance' => (string) ($account->ClosingCreditBalance ?? '0'),
+                'GroupingCategory' => (string) ($account->GroupingCategory ?? ''),
+                'GroupingCode' => (string) ($account->GroupingCode ?? ''),
+                'TaxonomyCode' => (string) ($account->TaxonomyCode ?? ''),
+            ];
+        }
+        return $accounts;
+    }
+
+    protected function extractGeneralLedgerEntries(): array
+    {
+        $entries = [];
+        $gle = $this->xml->GeneralLedgerEntries;
+        if (!$gle || !isset($gle->Journal)) return [];
+
+        foreach ($gle->Journal as $journal) {
+            $journalID = (string) ($journal->JournalID ?? '');
+            $journalDescription = (string) ($journal->Description ?? '');
+
+            if (!isset($journal->Transaction)) continue;
+
+            foreach ($journal->Transaction as $transaction) {
+                $lines = [];
+                if (isset($transaction->Lines)) {
+                    foreach ($transaction->Lines->children() as $line) {
+                        $lines[] = [
+                            'RecordID' => (string) ($line->RecordID ?? ''),
+                            'AccountID' => (string) ($line->AccountID ?? ''),
+                            'SourceDocumentID' => (string) ($line->SourceDocumentID ?? ''),
+                            'SystemEntryDate' => (string) ($line->SystemEntryDate ?? ''),
+                            'Description' => (string) ($line->Description ?? ''),
+                            'DebitAmount' => (string) ($line->DebitAmount ?? ''),
+                            'CreditAmount' => (string) ($line->CreditAmount ?? ''),
+                        ];
+                    }
+                }
+
+                $entries[] = [
+                    'JournalID' => $journalID,
+                    'JournalDescription' => $journalDescription,
+                    'TransactionID' => (string) ($transaction->TransactionID ?? ''),
+                    'Period' => (string) ($transaction->Period ?? ''),
+                    'TransactionDate' => (string) ($transaction->TransactionDate ?? ''),
+                    'SourceID' => (string) ($transaction->SourceID ?? ''),
+                    'Description' => (string) ($transaction->Description ?? ''),
+                    'DocArchivalNumber' => (string) ($transaction->DocArchivalNumber ?? ''),
+                    'TransactionType' => (string) ($transaction->TransactionType ?? ''),
+                    'SystemEntryDate' => (string) ($transaction->SystemEntryDate ?? ''),
+                    'CustomerID' => (string) ($transaction->CustomerID ?? ''),
+                    'SupplierID' => (string) ($transaction->SupplierID ?? ''),
+                    'Lines' => $lines,
+                ];
+            }
+        }
+        return $entries;
     }
 }

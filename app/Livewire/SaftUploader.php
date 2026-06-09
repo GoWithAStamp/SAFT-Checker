@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Services\SaftValidator\SaftValidatorService;
 use App\Services\SaftValidator\SaftDataExtractor;
 use App\Services\SaftValidator\SaftExportService;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -24,6 +25,11 @@ class SaftUploader extends Component
     public string $activeDataTab = 'header';
     public ?string $expandedInvoice = null;
     public ?string $expandedPayment = null;
+    public ?string $expandedTransaction = null;
+    public bool $isAccountingSaft = false;
+    public string $saftType = 'billing';
+    public ?string $searchQuery = null;
+    public ?string $validationFilter = null;
 
     public function updatedSaftFile(): void
     {
@@ -73,16 +79,72 @@ class SaftUploader extends Component
 
             $extractor = SaftDataExtractor::fromFile($path);
             $this->saftData = $extractor->extractAll();
+            $this->isAccountingSaft = $extractor->isAccountingSaft();
         } catch (\Throwable $e) {
-            $this->errorMessage = 'Erro ao validar o ficheiro: ' . $e->getMessage();
+            $this->errorMessage = __('saft.upload_error_generic') . $e->getMessage();
+        } finally {
+            $this->isValidating = false;
+            $this->cleanupTempFile();
+        }
+    }
+
+    public function loadSample(): void
+    {
+        $file = $this->saftType === 'accounting'
+            ? 'tests/fixtures/sample_saft_accounting.xml'
+            : 'tests/fixtures/sample_saft.xml';
+
+        $path = base_path($file);
+
+        if (!file_exists($path)) {
+            $this->errorMessage = 'Sample file not found.';
+            return;
+        }
+
+        $this->isValidating = true;
+        $this->result = null;
+        $this->summary = null;
+        $this->saftData = null;
+        $this->errorMessage = null;
+
+        try {
+            $this->fileName = $this->saftType === 'accounting'
+                ? 'sample_contabilidade.xml'
+                : 'sample_faturacao.xml';
+
+            $validator = new SaftValidatorService();
+            $validationResult = $validator->validate($path);
+
+            $this->result = [
+                'errors' => array_map(fn($e) => (array) $e, $validationResult->errors),
+                'warnings' => array_map(fn($w) => (array) $w, $validationResult->warnings),
+                'info' => array_map(fn($i) => (array) $i, $validationResult->info),
+            ];
+            $this->summary = $validationResult->summary();
+
+            $extractor = SaftDataExtractor::fromFile($path);
+            $this->saftData = $extractor->extractAll();
+            $this->isAccountingSaft = $extractor->isAccountingSaft();
+        } catch (\Throwable $e) {
+            $this->errorMessage = __('saft.upload_error_generic') . $e->getMessage();
         } finally {
             $this->isValidating = false;
         }
     }
 
+    public function setSaftType(string $type): void
+    {
+        $this->saftType = $type;
+    }
+
+    public function setValidationFilter(?string $filter): void
+    {
+        $this->validationFilter = $this->validationFilter === $filter ? null : $filter;
+    }
+
     public function resetUpload(): void
     {
-        $this->saftFile = null;
+        $this->cleanupTempFile();
         $this->result = null;
         $this->summary = null;
         $this->saftData = null;
@@ -92,6 +154,11 @@ class SaftUploader extends Component
         $this->activeDataTab = 'header';
         $this->expandedInvoice = null;
         $this->expandedPayment = null;
+        $this->expandedTransaction = null;
+        $this->isAccountingSaft = false;
+        $this->saftType = 'billing';
+        $this->searchQuery = null;
+        $this->validationFilter = null;
     }
 
     public function setActiveTab(string $tab): void
@@ -104,6 +171,12 @@ class SaftUploader extends Component
         $this->activeDataTab = $tab;
         $this->expandedInvoice = null;
         $this->expandedPayment = null;
+        $this->expandedTransaction = null;
+    }
+
+    public function toggleTransaction(string $transactionID): void
+    {
+        $this->expandedTransaction = $this->expandedTransaction === $transactionID ? null : $transactionID;
     }
 
     public function toggleInvoice(string $invoiceNo): void
@@ -147,6 +220,8 @@ class SaftUploader extends Component
             'payments' => ['Payments', 'Payment'],
             'movements' => ['MovementOfGoods', 'StockMovement'],
             'working_documents' => ['WorkingDocuments', 'WorkDocument'],
+            'general_ledger_accounts' => ['GeneralLedgerAccounts', 'Account'],
+            'general_ledger_entries' => ['GeneralLedgerEntries', 'Transaction'],
         ];
 
         return response()->streamDownload(function () use ($section, $itemNames) {
@@ -167,16 +242,18 @@ class SaftUploader extends Component
         $baseName = pathinfo($this->fileName ?? 'saft', PATHINFO_FILENAME);
         $filename = "{$baseName}_completo.csv";
 
-        $sections = ['customers', 'suppliers', 'products', 'tax_table', 'invoices', 'payments', 'movements', 'working_documents'];
+        $sections = ['customers', 'suppliers', 'products', 'tax_table', 'general_ledger_accounts', 'invoices', 'payments', 'movements', 'working_documents', 'general_ledger_entries'];
         $sectionLabels = [
             'customers' => 'CLIENTES',
             'suppliers' => 'FORNECEDORES',
             'products' => 'PRODUTOS',
             'tax_table' => 'TABELA IVA',
+            'general_ledger_accounts' => 'PLANO DE CONTAS',
             'invoices' => 'FATURAS',
             'payments' => 'PAGAMENTOS',
             'movements' => 'DOCUMENTOS DE TRANSPORTE',
             'working_documents' => 'DOCUMENTOS DE TRABALHO',
+            'general_ledger_entries' => 'LANÇAMENTOS CONTABILÍSTICOS',
         ];
 
         return response()->streamDownload(function () use ($sections, $sectionLabels) {
@@ -218,6 +295,33 @@ class SaftUploader extends Component
         }, $filename, [
             'Content-Type' => 'text/csv; charset=UTF-8',
         ]);
+    }
+
+    /**
+     * GDPR: Delete temporary uploaded file immediately after processing.
+     */
+    protected function cleanupTempFile(): void
+    {
+        try {
+            if ($this->saftFile && method_exists($this->saftFile, 'getRealPath')) {
+                $realPath = $this->saftFile->getRealPath();
+                if ($realPath && file_exists($realPath)) {
+                    @unlink($realPath);
+                }
+            }
+
+            // Also clean Livewire's temp storage path
+            if ($this->saftFile && method_exists($this->saftFile, 'getFilename')) {
+                $tmpPath = 'livewire-tmp/' . $this->saftFile->getFilename();
+                if (Storage::disk('local')->exists($tmpPath)) {
+                    Storage::disk('local')->delete($tmpPath);
+                }
+            }
+        } catch (\Throwable $e) {
+            // Silently fail — file will be cleaned by Livewire's 24h cleanup
+        }
+
+        $this->saftFile = null;
     }
 
     public function render()

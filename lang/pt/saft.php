@@ -4,34 +4,55 @@ return [
     // Navigation
     'app_name' => 'SAFT Checker',
     'subtitle' => 'Validador SAFT-PT',
-    'footer' => 'SAFT Checker — Validador de ficheiros SAFT-PT conforme legislação portuguesa',
+    'footer' => 'SAFT Checker — Validador de ficheiros SAFT-PT conforme legislacao portuguesa',
+    'footer_created_by' => 'Criado por Henrique Vasconcelos',
 
     // Upload
-    'upload_title' => 'Validar ficheiro SAFT-PT',
-    'upload_description' => 'Carregue o seu ficheiro SAFT-PT para verificar a conformidade com a legislação portuguesa.',
-    'upload_drag' => 'Arraste o ficheiro SAFT-PT aqui',
+    'upload_title' => 'Valide o seu ficheiro SAF-T (PT)',
+    'upload_description' => 'Carregue o ficheiro XML da sua faturacao. Verificamos a conformidade com as regras fiscais portuguesas e organizamos todos os dados em tabelas.',
+    'upload_drag' => 'Arraste o ficheiro para aqui',
     'upload_or' => 'ou',
-    'upload_select' => 'Selecionar ficheiro XML',
+    'upload_select' => 'Procurar ficheiro',
     'upload_select_another' => 'Escolher outro ficheiro',
-    'upload_ready' => 'Ficheiro pronto para validação',
-    'upload_validate' => 'Validar SAFT-PT',
+    'upload_ready' => 'Ficheiro pronto para validacao',
+    'upload_validate' => 'Validar SAF-T',
     'upload_validating' => 'A validar...',
+    'upload_type_question' => 'Que tipo de ficheiro SAF-T vai validar?',
+    'type_billing' => 'Faturacao',
+    'type_billing_desc' => 'Faturas, clientes, produtos, recibos e guias de transporte.',
+    'type_accounting' => 'Contabilidade',
+    'type_accounting_desc' => 'Plano de contas, lancamentos e movimentos do razao.',
+    'upload_use_sample' => 'Ver um exemplo',
+    'upload_hint' => 'Ficheiros .xml ate 50 MB · SAF-T (PT) v1.04_01',
+    'feat1_title' => 'Validacao fiscal',
+    'feat1_body' => 'Sequencia de documentos, assinaturas digitais, NIF e totais conferidos automaticamente.',
+    'feat2_title' => 'Dados organizados',
+    'feat2_body' => 'Clientes, produtos, faturas e recibos em tabelas ordenaveis e pesquisaveis.',
+    'feat3_title' => 'Exportacao',
+    'feat3_body' => 'Exporte qualquer seccao em CSV ou XML, ou o ficheiro completo num clique.',
     'upload_error_xml' => 'O ficheiro deve ser um XML.',
     'upload_error_required' => 'Por favor selecione um ficheiro SAFT-PT.',
     'upload_error_max' => 'O ficheiro não pode exceder 200MB.',
     'upload_error_generic' => 'Erro ao validar o ficheiro: ',
 
     // Results
-    'results_title' => 'Resultado da Validação',
-    'results_new' => 'Nova validação',
+    'results_title' => 'Resultado da Validacao',
+    'results_new' => 'Novo ficheiro',
     'results_file' => 'Ficheiro',
     'results_status' => 'Estado',
-    'results_valid' => 'Válido',
-    'results_invalid' => 'Com erros',
+    'results_valid' => 'Ficheiro valido',
+    'results_invalid' => 'Foram encontrados erros',
     'results_errors' => 'Erros',
     'results_warnings' => 'Avisos',
-    'results_info' => 'Informações',
+    'results_info' => 'Informacoes',
+    'results_total' => 'Todas',
     'results_no_issues' => 'Ficheiro sem problemas detectados.',
+    'results_fix_before_submit' => 'Corrija os erros antes de submeter a Autoridade Tributaria.',
+    'results_occurrences' => 'Ocorrencias de validacao',
+    'results_records' => 'registos',
+    'results_error_label' => 'Erro',
+    'results_warning_label' => 'Aviso',
+    'results_info_label' => 'Info',
     'results_field' => 'Campo',
     'results_xml_line' => 'Linha XML',
 
@@ -49,10 +70,15 @@ return [
     'data_payments' => 'Pagamentos',
     'data_movements' => 'Transporte',
     'data_working_docs' => 'Doc. Trabalho',
+    'data_accounts' => 'Plano Contas',
+    'data_ledger_entries' => 'Lançamentos',
+
+    // Search
+    'search_placeholder' => 'Pesquisar...',
 
     // Export
-    'export_section' => 'Exportar secção atual',
-    'export_all' => 'Exportar tudo (CSV)',
+    'export_section' => 'Exportar seccao atual',
+    'export_all' => 'Exportar tudo',
 
     // Header fields
     'header_title' => 'Informação do Cabeçalho',
@@ -79,6 +105,13 @@ return [
     'header_city' => 'Cidade',
     'header_postal_code' => 'Código Postal',
     'header_country' => 'País',
+    'header_taxonomy_ref' => 'Taxonomia',
+    'tax_basis_f' => 'Faturação',
+    'tax_basis_c' => 'Contabilidade',
+    'tax_basis_i' => 'Integrado',
+    'tax_basis_s' => 'Autofaturação',
+    'tax_basis_e' => 'Faturação emitida por terceiros',
+    'tax_basis_p' => 'Faturação parcial',
 
     // Table columns
     'col_id' => 'ID',
@@ -114,6 +147,49 @@ return [
     'col_amount' => 'Valor',
     'col_exemption' => 'Isenção',
 
+    // Header fields - accounting
+    'header_accounts_title' => 'Plano de Contas',
+    'header_ledger_title' => 'Lançamentos Contabilísticos',
+
+    // Table columns - accounting
+    'col_account_id' => 'Conta',
+    'col_account_description' => 'Descrição',
+    'col_opening_debit' => 'Abertura Débito',
+    'col_opening_credit' => 'Abertura Crédito',
+    'col_closing_debit' => 'Fecho Débito',
+    'col_closing_credit' => 'Fecho Crédito',
+    'col_grouping_category' => 'Categoria',
+    'col_grouping_code' => 'Cód. Agrupamento',
+    'col_taxonomy_code' => 'Taxonomia',
+    'col_journal' => 'Diário',
+    'col_journal_desc' => 'Desc. Diário',
+    'col_transaction_id' => 'Transação',
+    'col_period' => 'Período',
+    'col_transaction_type' => 'Tipo',
+    'col_source_id' => 'Utilizador',
+    'col_doc_archival' => 'Nº Arquivo',
+    'col_debit' => 'Débito',
+    'col_credit' => 'Crédito',
+    'col_record_id' => 'Registo',
+    'col_source_doc' => 'Doc. Origem',
+
+    // Transaction types
+    'transaction_type_N' => 'Normal',
+    'transaction_type_R' => 'Regularização',
+    'transaction_type_A' => 'Apuramento',
+    'transaction_type_J' => 'Ajustamento',
+
+    // Grouping categories
+    'grouping_GR' => '1º Grau Geral',
+    'grouping_GA' => 'Agregadora Geral',
+    'grouping_GM' => 'Movimento Geral',
+    'grouping_AR' => '1º Grau Analítica',
+    'grouping_AA' => 'Agregadora Analítica',
+    'grouping_AM' => 'Movimento Analítica',
+
+    // Transaction lines
+    'transaction_lines' => 'Linhas da Transação',
+
     // Invoice lines
     'invoice_lines' => 'Linhas da Fatura',
 
@@ -140,9 +216,60 @@ return [
     'empty_payments' => 'Sem pagamentos',
     'empty_movements' => 'Sem documentos de transporte',
     'empty_working_docs' => 'Sem documentos de trabalho',
+    'empty_accounts' => 'Sem contas no plano',
+    'empty_ledger_entries' => 'Sem lançamentos contabilísticos',
 
     // Theme
     'theme_light' => 'Modo claro',
     'theme_dark' => 'Modo escuro',
     'language' => 'Idioma',
+
+    // GDPR / Privacy
+    'privacy_link' => 'Politica de Privacidade',
+    'gdpr_notice' => 'O seu ficheiro e processado localmente no servidor e eliminado imediatamente apos a validacao. Nenhum dado e armazenado, partilhado com terceiros ou utilizado para qualquer outra finalidade. Saiba mais na nossa',
+    'gdpr_secure_line' => 'Processado localmente · Nenhum dado e armazenado',
+    'cookie_banner_text' => 'Este site utiliza apenas cookies estritamente necessarios para o funcionamento (sessao, seguranca CSRF e preferencias de tema). Nao utilizamos cookies de rastreamento ou analitica. Mais informacoes na',
+    'cookie_accept' => 'Entendido',
+
+    'privacy_title' => 'Politica de Privacidade',
+    'privacy_last_updated' => 'Ultima atualizacao',
+    'privacy_back' => 'Voltar ao inicio',
+
+    'privacy_what_title' => '1. O que fazemos',
+    'privacy_what_text' => 'O SAFT Checker e uma ferramenta de validacao de ficheiros SAFT-PT. O utilizador carrega o ficheiro XML, que e analisado para verificar conformidade com a legislacao fiscal portuguesa. Toda a analise e feita em tempo real no servidor.',
+
+    'privacy_data_title' => '2. Dados pessoais processados',
+    'privacy_data_text' => 'Os ficheiros SAFT-PT podem conter dados pessoais de terceiros, incluindo:',
+    'privacy_data_nif' => 'Numeros de Identificacao Fiscal (NIF) de clientes e fornecedores',
+    'privacy_data_names' => 'Nomes de empresas e pessoas singulares',
+    'privacy_data_addresses' => 'Moradas, codigos postais, cidades',
+    'privacy_data_financial' => 'Valores financeiros (faturas, pagamentos, lancamentos contabilisticos)',
+
+    'privacy_storage_title' => '3. Armazenamento e retencao de dados',
+    'privacy_storage_text' => 'Garantimos a protecao dos seus dados:',
+    'privacy_storage_no_db' => 'Nenhum dado do ficheiro SAFT e guardado em base de dados',
+    'privacy_storage_no_persist' => 'O ficheiro XML nao e armazenado permanentemente no servidor',
+    'privacy_storage_temp' => 'Ficheiros temporarios sao eliminados imediatamente apos o processamento',
+    'privacy_storage_no_third' => 'Nenhum dado e transmitido a terceiros, servicos de analitica ou plataformas externas',
+
+    'privacy_legal_title' => '4. Base juridica',
+    'privacy_legal_text' => 'O processamento dos dados baseia-se no consentimento do utilizador (Art. 6.1.a do RGPD), manifestado pelo ato voluntario de carregar o ficheiro para validacao. Sendo o utilizador o responsavel pelo tratamento dos dados contidos no ficheiro SAFT-PT, a utilizacao desta ferramenta constitui um processamento por iniciativa propria.',
+
+    'privacy_cookies_title' => '5. Cookies',
+    'privacy_cookies_text' => 'Utilizamos apenas cookies estritamente necessarios ao funcionamento do site. Nao utilizamos cookies de rastreamento, analitica ou publicidade.',
+    'privacy_cookie_purpose' => 'Finalidade',
+    'privacy_cookie_duration' => 'Duracao',
+    'privacy_cookie_session' => 'Sessao de navegacao e preferencia de idioma',
+    'privacy_cookie_csrf' => 'Protecao contra ataques CSRF (seguranca)',
+    'privacy_cookie_dark' => 'Preferencia de tema claro/escuro (localStorage)',
+    'privacy_cookie_consent' => 'Registo do consentimento de cookies (localStorage)',
+    'privacy_cookie_session_duration' => 'Sessao do browser',
+    'privacy_cookie_persistent' => 'Persistente',
+    'privacy_cookie_1year' => '1 ano',
+
+    'privacy_rights_title' => '6. Os seus direitos',
+    'privacy_rights_text' => 'Como nao armazenamos dados pessoais, os direitos de acesso, retificacao, apagamento e portabilidade (Arts. 15-20 do RGPD) sao automaticamente satisfeitos — nao ha dados a aceder, corrigir ou eliminar. Se tiver questoes sobre o tratamento de dados, pode contactar-nos.',
+
+    'privacy_contact_title' => '7. Contacto',
+    'privacy_contact_text' => 'Para questoes relacionadas com protecao de dados ou esta politica de privacidade, contacte-nos atraves do repositorio do projeto no GitHub.',
 ];

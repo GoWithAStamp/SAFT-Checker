@@ -9,6 +9,8 @@ use App\Services\SaftValidator\Rules\SourceDocuments\SalesInvoicesValidator;
 use App\Services\SaftValidator\Rules\SourceDocuments\PaymentsValidator;
 use App\Services\SaftValidator\Rules\SourceDocuments\MovementOfGoodsValidator;
 use App\Services\SaftValidator\Rules\SourceDocuments\WorkingDocumentsValidator;
+use App\Services\SaftValidator\Rules\MasterFiles\GeneralLedgerAccountsValidator;
+use App\Services\SaftValidator\Rules\SourceDocuments\GeneralLedgerEntriesValidator;
 
 class SaftValidatorService
 {
@@ -76,10 +78,12 @@ class SaftValidatorService
         $validators = [
             new HeaderValidator($this->xml),
             new MasterFilesValidator($this->xml),
+            new GeneralLedgerAccountsValidator($this->xml),
             new SalesInvoicesValidator($this->xml),
             new PaymentsValidator($this->xml),
             new MovementOfGoodsValidator($this->xml),
             new WorkingDocumentsValidator($this->xml),
+            new GeneralLedgerEntriesValidator($this->xml),
         ];
 
         foreach ($validators as $validator) {

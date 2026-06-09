@@ -2,32 +2,87 @@
 <AuditFile xmlns="urn:OECD:StandardAuditFile-Tax:PT_1.04_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Header>
         <AuditFileVersion>1.04_01</AuditFileVersion>
-        <CompanyID>500000000</CompanyID>
-        <TaxRegistrationNumber>500000000</TaxRegistrationNumber>
+        <CompanyID>503876214</CompanyID>
+        <TaxRegistrationNumber>503876214</TaxRegistrationNumber>
         <TaxAccountingBasis>F</TaxAccountingBasis>
-        <CompanyName>Empresa Teste Lda</CompanyName>
-        <BusinessName>Empresa Teste</BusinessName>
+        <CompanyName>Lusitania Comercio e Servicos, Lda</CompanyName>
+        <BusinessName>Lusitania Comercio</BusinessName>
         <CompanyAddress>
-            <AddressDetail>Rua de Teste 123</AddressDetail>
+            <AddressDetail>Rua Augusta 274, 2o Esq</AddressDetail>
             <City>Lisboa</City>
-            <PostalCode>1000-001</PostalCode>
+            <PostalCode>1100-053</PostalCode>
             <Country>PT</Country>
         </CompanyAddress>
         <FiscalYear>2026</FiscalYear>
         <StartDate>2026-01-01</StartDate>
         <EndDate>2026-06-30</EndDate>
         <CurrencyCode>EUR</CurrencyCode>
-        <DateCreated>2026-06-08</DateCreated>
+        <DateCreated>2026-06-09</DateCreated>
         <TaxEntity>Global</TaxEntity>
-        <ProductCompanyTaxID>500000000</ProductCompanyTaxID>
-        <SoftwareCertificateNumber>0000</SoftwareCertificateNumber>
-        <ProductID>SAFT Checker/1.0</ProductID>
-        <ProductVersion>1.0</ProductVersion>
+        <ProductCompanyTaxID>500100200</ProductCompanyTaxID>
+        <SoftwareCertificateNumber>2048</SoftwareCertificateNumber>
+        <ProductID>FaturaPro/4.1</ProductID>
+        <ProductVersion>4.1</ProductVersion>
+        <Telephone>213456789</Telephone>
+        <Email>geral@lusitaniacomercio.pt</Email>
+        <Website>www.lusitaniacomercio.pt</Website>
     </Header>
     <MasterFiles>
         <Customer>
             <CustomerID>C001</CustomerID>
-            <AccountID>Desconhecido</AccountID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>509123456</CustomerTaxID>
+            <CompanyName>Padaria Central, Lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Rua do Comercio 12</AddressDetail>
+                <City>Porto</City>
+                <PostalCode>4000-100</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C002</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>510987654</CustomerTaxID>
+            <CompanyName>Restaurante Beira Rio, SA</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Av. Marginal 88</AddressDetail>
+                <City>Cascais</City>
+                <PostalCode>2750-300</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C003</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>511222333</CustomerTaxID>
+            <CompanyName>Hotel Miramar, Lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Praca da Republica 5</AddressDetail>
+                <City>Faro</City>
+                <PostalCode>8000-078</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C004</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>512333444</CustomerTaxID>
+            <CompanyName>Supermercados Algarve, SA</CompanyName>
+            <BillingAddress>
+                <AddressDetail>EN125, Km 34</AddressDetail>
+                <City>Loule</City>
+                <PostalCode>8100-200</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C005</CustomerID>
+            <AccountID>211</AccountID>
             <CustomerTaxID>999999990</CustomerTaxID>
             <CompanyName>Consumidor Final</CompanyName>
             <BillingAddress>
@@ -38,11 +93,104 @@
             </BillingAddress>
             <SelfBillingIndicator>0</SelfBillingIndicator>
         </Customer>
+        <Customer>
+            <CustomerID>C006</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>513444555</CustomerTaxID>
+            <CompanyName>Cafe Lisboa, Unipessoal Lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Rua Garrett 120</AddressDetail>
+                <City>Lisboa</City>
+                <PostalCode>1200-205</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C007</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>514555666</CustomerTaxID>
+            <CompanyName>Construcoes Douro, SA</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Zona Industrial de Gaia, Lote 8</AddressDetail>
+                <City>Vila Nova de Gaia</City>
+                <PostalCode>4400-500</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C008</CustomerID>
+            <AccountID>211</AccountID>
+            <CustomerTaxID>515666777</CustomerTaxID>
+            <CompanyName>Escola Secundaria D. Pedro V</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Rua da Escola Politecnica 50</AddressDetail>
+                <City>Lisboa</City>
+                <PostalCode>1250-102</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC001</ProductCode>
+            <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+            <ProductNumberCode>5601234000001</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC002</ProductCode>
+            <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+            <ProductNumberCode>5601234000002</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC003</ProductCode>
+            <ProductDescription>Acucar branco 1kg</ProductDescription>
+            <ProductNumberCode>5601234000003</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC004</ProductCode>
+            <ProductDescription>Sal marinho fino 1kg</ProductDescription>
+            <ProductNumberCode>5601234000004</ProductNumberCode>
+        </Product>
         <Product>
             <ProductType>S</ProductType>
             <ProductCode>SRV001</ProductCode>
-            <ProductDescription>Servico de consultoria</ProductDescription>
+            <ProductDescription>Servico de consultoria alimentar</ProductDescription>
             <ProductNumberCode>SRV001</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>S</ProductType>
+            <ProductCode>SRV002</ProductCode>
+            <ProductDescription>Servico de entrega expresso</ProductDescription>
+            <ProductNumberCode>SRV002</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC005</ProductCode>
+            <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+            <ProductNumberCode>5601234000005</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC006</ProductCode>
+            <ProductDescription>Manteiga sem sal 250g</ProductDescription>
+            <ProductNumberCode>5601234000006</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>MERC007</ProductCode>
+            <ProductDescription>Leite UHT meio gordo 1L</ProductDescription>
+            <ProductNumberCode>5601234000007</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>O</ProductType>
+            <ProductCode>EMB001</ProductCode>
+            <ProductDescription>Embalagem cartao grande</ProductDescription>
+            <ProductNumberCode>EMB001</ProductNumberCode>
         </Product>
         <TaxTable>
             <TaxTableEntry>
@@ -55,6 +203,20 @@
             <TaxTableEntry>
                 <TaxType>IVA</TaxType>
                 <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>INT</TaxCode>
+                <Description>IVA taxa intermedia</Description>
+                <TaxPercentage>13</TaxPercentage>
+            </TaxTableEntry>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>RED</TaxCode>
+                <Description>IVA taxa reduzida</Description>
+                <TaxPercentage>6</TaxPercentage>
+            </TaxTableEntry>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
                 <TaxCode>ISE</TaxCode>
                 <Description>IVA isento</Description>
                 <TaxPercentage>0</TaxPercentage>
@@ -63,19 +225,109 @@
     </MasterFiles>
     <SourceDocuments>
         <SalesInvoices>
-            <NumberOfEntries>1</NumberOfEntries>
-            <TotalDebit>0.00</TotalDebit>
-            <TotalCredit>123.00</TotalCredit>
+            <NumberOfEntries>14</NumberOfEntries>
+            <TotalDebit>615.00</TotalDebit>
+            <TotalCredit>19337.54</TotalCredit>
+            <!-- FT 2026/0001 -->
             <Invoice>
-                <InvoiceNo>FT A/1</InvoiceNo>
-                <ATCUD>0-1</ATCUD>
+                <InvoiceNo>FT 2026/0001</InvoiceNo>
+                <ATCUD>ABCD1234-1</ATCUD>
                 <DocumentStatus>
                     <InvoiceStatus>N</InvoiceStatus>
-                    <InvoiceStatusDate>2026-01-15T10:30:00</InvoiceStatusDate>
+                    <InvoiceStatusDate>2026-01-08T09:15:00</InvoiceStatusDate>
                     <SourceID>admin</SourceID>
                     <SourceBilling>P</SourceBilling>
                 </DocumentStatus>
-                <Hash>ABCDEFGHIJ</Hash>
+                <Hash>aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0u</Hash>
+                <HashControl>1</HashControl>
+                <Period>01</Period>
+                <InvoiceDate>2026-01-08</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-01-08T09:15:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>20</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>12.50</UnitPrice>
+                    <CreditAmount>250.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC002</ProductCode>
+                    <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+                    <Quantity>10</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>24.90</UnitPrice>
+                    <CreditAmount>249.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>3</LineNumber>
+                    <ProductCode>MERC003</ProductCode>
+                    <ProductDescription>Acucar branco 1kg</ProductDescription>
+                    <Quantity>50</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>0.99</UnitPrice>
+                    <CreditAmount>49.50</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>4</LineNumber>
+                    <ProductCode>SRV002</ProductCode>
+                    <ProductDescription>Servico de entrega expresso</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>15.00</UnitPrice>
+                    <CreditAmount>15.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>37.36</TaxPayable>
+                    <NetTotal>563.50</NetTotal>
+                    <GrossTotal>600.86</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0002 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0002</InvoiceNo>
+                <ATCUD>ABCD1234-2</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-01-15T14:20:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>bC2dE3fG4hI5jK6lM7nO8pQ9rS0tU1v</Hash>
                 <HashControl>1</HashControl>
                 <Period>01</Period>
                 <InvoiceDate>2026-01-15</InvoiceDate>
@@ -86,16 +338,194 @@
                     <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
                 </SpecialRegimes>
                 <SourceID>admin</SourceID>
-                <SystemEntryDate>2026-01-15T10:30:00</SystemEntryDate>
-                <CustomerID>C001</CustomerID>
+                <SystemEntryDate>2026-01-15T14:20:00</SystemEntryDate>
+                <CustomerID>C002</CustomerID>
                 <Line>
                     <LineNumber>1</LineNumber>
-                    <ProductCode>SRV001</ProductCode>
-                    <ProductDescription>Servico de consultoria</ProductDescription>
-                    <Quantity>1</Quantity>
+                    <ProductCode>MERC002</ProductCode>
+                    <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+                    <Quantity>15</Quantity>
                     <UnitOfMeasure>UN</UnitOfMeasure>
-                    <UnitPrice>100.00</UnitPrice>
-                    <CreditAmount>100.00</CreditAmount>
+                    <UnitPrice>24.90</UnitPrice>
+                    <CreditAmount>373.50</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>8</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>148.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>41.65</TaxPayable>
+                    <NetTotal>521.50</NetTotal>
+                    <GrossTotal>563.15</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0003 — deliberate sequence gap (no 0003, jumps to 0004) -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0004</InvoiceNo>
+                <ATCUD>ABCD1234-4</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-02-03T10:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3x</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <InvoiceDate>2026-02-03</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-03T10:00:00</SystemEntryDate>
+                <CustomerID>C003</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>30</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>555.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC006</ProductCode>
+                    <ProductDescription>Manteiga sem sal 250g</ProductDescription>
+                    <Quantity>40</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>2.85</UnitPrice>
+                    <CreditAmount>114.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>3</LineNumber>
+                    <ProductCode>MERC007</ProductCode>
+                    <ProductDescription>Leite UHT meio gordo 1L</ProductDescription>
+                    <Quantity>100</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>0.75</UnitPrice>
+                    <CreditAmount>75.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>83.49</TaxPayable>
+                    <NetTotal>744.00</NetTotal>
+                    <GrossTotal>827.49</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0005 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0005</InvoiceNo>
+                <ATCUD>ABCD1234-5</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-02-10T16:30:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4y</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <InvoiceDate>2026-02-10</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-10T16:30:00</SystemEntryDate>
+                <CustomerID>C004</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>100</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>11.80</UnitPrice>
+                    <CreditAmount>1180.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC003</ProductCode>
+                    <ProductDescription>Acucar branco 1kg</ProductDescription>
+                    <Quantity>200</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>0.95</UnitPrice>
+                    <CreditAmount>190.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>3</LineNumber>
+                    <ProductCode>MERC004</ProductCode>
+                    <ProductDescription>Sal marinho fino 1kg</ProductDescription>
+                    <Quantity>80</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>1.20</UnitPrice>
+                    <CreditAmount>96.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>4</LineNumber>
+                    <ProductCode>EMB001</ProductCode>
+                    <ProductDescription>Embalagem cartao grande</ProductDescription>
+                    <Quantity>10</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>3.50</UnitPrice>
+                    <CreditAmount>35.00</CreditAmount>
                     <Tax>
                         <TaxType>IVA</TaxType>
                         <TaxCountryRegion>PT</TaxCountryRegion>
@@ -104,11 +534,862 @@
                     </Tax>
                 </Line>
                 <DocumentTotals>
-                    <TaxPayable>23.00</TaxPayable>
-                    <NetTotal>100.00</NetTotal>
-                    <GrossTotal>123.00</GrossTotal>
+                    <TaxPayable>96.01</TaxPayable>
+                    <NetTotal>1501.00</NetTotal>
+                    <GrossTotal>1597.01</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0006 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0006</InvoiceNo>
+                <ATCUD>ABCD1234-6</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-02-20T11:45:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>fG6hI7jK8lM9nO0pQ1rS2tU3vW4xY5z</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <InvoiceDate>2026-02-20</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-20T11:45:00</SystemEntryDate>
+                <CustomerID>C006</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>5</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>92.50</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>12.03</TaxPayable>
+                    <NetTotal>92.50</NetTotal>
+                    <GrossTotal>104.53</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0007 — cancelled -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0007</InvoiceNo>
+                <ATCUD>ABCD1234-7</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>A</InvoiceStatus>
+                    <InvoiceStatusDate>2026-03-02T09:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                    <Reason>Dados incorretos do cliente</Reason>
+                </DocumentStatus>
+                <Hash>gH7iJ8kL9mN0oP1qR2sT3uV4wX5yZ6a</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <InvoiceDate>2026-03-01</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-01T15:30:00</SystemEntryDate>
+                <CustomerID>C007</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>SRV001</ProductCode>
+                    <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>500.00</UnitPrice>
+                    <CreditAmount>500.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>115.00</TaxPayable>
+                    <NetTotal>500.00</NetTotal>
+                    <GrossTotal>615.00</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0008 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0008</InvoiceNo>
+                <ATCUD>ABCD1234-8</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-03-05T10:15:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>hI8jK9lM0nO1pQ2rS3tU4vW5xY6zA7b</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <InvoiceDate>2026-03-05</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-05T10:15:00</SystemEntryDate>
+                <CustomerID>C007</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>SRV001</ProductCode>
+                    <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>500.00</UnitPrice>
+                    <CreditAmount>500.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>115.00</TaxPayable>
+                    <NetTotal>500.00</NetTotal>
+                    <GrossTotal>615.00</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0009 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0009</InvoiceNo>
+                <ATCUD>ABCD1234-9</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-03-18T13:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>iJ9kL0mN1oP2qR3sT4uV5wX6yZ7aB8c</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <InvoiceDate>2026-03-18</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-18T13:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>30</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>12.50</UnitPrice>
+                    <CreditAmount>375.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC006</ProductCode>
+                    <ProductDescription>Manteiga sem sal 250g</ProductDescription>
+                    <Quantity>20</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>2.85</UnitPrice>
+                    <CreditAmount>57.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>25.92</TaxPayable>
+                    <NetTotal>432.00</NetTotal>
+                    <GrossTotal>457.92</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0010 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0010</InvoiceNo>
+                <ATCUD>ABCD1234-10</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-04-02T08:30:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>jK0lM1nO2pQ3rS4tU5vW6xY7zA8bC9d</Hash>
+                <HashControl>1</HashControl>
+                <Period>04</Period>
+                <InvoiceDate>2026-04-02</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-04-02T08:30:00</SystemEntryDate>
+                <CustomerID>C002</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC002</ProductCode>
+                    <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+                    <Quantity>20</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>24.90</UnitPrice>
+                    <CreditAmount>498.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC007</ProductCode>
+                    <ProductDescription>Leite UHT meio gordo 1L</ProductDescription>
+                    <Quantity>50</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>0.75</UnitPrice>
+                    <CreditAmount>37.50</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>32.13</TaxPayable>
+                    <NetTotal>535.50</NetTotal>
+                    <GrossTotal>567.63</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FS 2026/0001 — simplified invoice -->
+            <Invoice>
+                <InvoiceNo>FS 2026/0001</InvoiceNo>
+                <ATCUD>EFGH5678-1</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-04-10T17:00:00</InvoiceStatusDate>
+                    <SourceID>pos01</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>kL1mN2oP3qR4sT5uV6wX7yZ8aB9cD0e</Hash>
+                <HashControl>1</HashControl>
+                <Period>04</Period>
+                <InvoiceDate>2026-04-10</InvoiceDate>
+                <InvoiceType>FS</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>pos01</SourceID>
+                <SystemEntryDate>2026-04-10T17:00:00</SystemEntryDate>
+                <CustomerID>C005</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>2</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>19.90</UnitPrice>
+                    <CreditAmount>39.80</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>5.17</TaxPayable>
+                    <NetTotal>39.80</NetTotal>
+                    <GrossTotal>44.97</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- NC 2026/0001 — credit note -->
+            <Invoice>
+                <InvoiceNo>NC 2026/0001</InvoiceNo>
+                <ATCUD>IJKL9012-1</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-04-15T09:30:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>lM2nO3pQ4rS5tU6vW7xY8zA9bC0dE1f</Hash>
+                <HashControl>1</HashControl>
+                <Period>04</Period>
+                <InvoiceDate>2026-04-15</InvoiceDate>
+                <InvoiceType>NC</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-04-15T09:30:00</SystemEntryDate>
+                <CustomerID>C004</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>10</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>11.80</UnitPrice>
+                    <DebitAmount>118.00</DebitAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>7.08</TaxPayable>
+                    <NetTotal>118.00</NetTotal>
+                    <GrossTotal>125.08</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0011 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0011</InvoiceNo>
+                <ATCUD>ABCD1234-11</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-05-05T14:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>mN3oP4qR5sT6uV7wX8yZ9aB0cD1eF2g</Hash>
+                <HashControl>1</HashControl>
+                <Period>05</Period>
+                <InvoiceDate>2026-05-05</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-05-05T14:00:00</SystemEntryDate>
+                <CustomerID>C008</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>SRV001</ProductCode>
+                    <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>750.00</UnitPrice>
+                    <CreditAmount>750.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>ISE</TaxCode>
+                        <TaxPercentage>0</TaxPercentage>
+                    </Tax>
+                    <TaxExemptionReason>M30 - Isencao art 9o CIVA</TaxExemptionReason>
+                    <TaxExemptionCode>M30</TaxExemptionCode>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>750.00</NetTotal>
+                    <GrossTotal>750.00</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <!-- FT 2026/0012 -->
+            <Invoice>
+                <InvoiceNo>FT 2026/0012</InvoiceNo>
+                <ATCUD>ABCD1234-12</ATCUD>
+                <DocumentStatus>
+                    <InvoiceStatus>N</InvoiceStatus>
+                    <InvoiceStatusDate>2026-05-22T10:00:00</InvoiceStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>nO4pQ5rS6tU7vW8xY9zA0bC1dE2fG3h</Hash>
+                <HashControl>1</HashControl>
+                <Period>05</Period>
+                <InvoiceDate>2026-05-22</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SpecialRegimes>
+                    <SelfBillingIndicator>0</SelfBillingIndicator>
+                    <CashVATSchemeIndicator>0</CashVATSchemeIndicator>
+                    <ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>
+                </SpecialRegimes>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-05-22T10:00:00</SystemEntryDate>
+                <CustomerID>C003</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>25</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>462.50</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC002</ProductCode>
+                    <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+                    <Quantity>12</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>24.90</UnitPrice>
+                    <CreditAmount>298.80</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>3</LineNumber>
+                    <ProductCode>SRV002</ProductCode>
+                    <ProductDescription>Servico de entrega expresso</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>25.00</UnitPrice>
+                    <CreditAmount>25.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>84.95</TaxPayable>
+                    <NetTotal>786.30</NetTotal>
+                    <GrossTotal>871.25</GrossTotal>
                 </DocumentTotals>
             </Invoice>
         </SalesInvoices>
+        <Payments>
+            <NumberOfEntries>3</NumberOfEntries>
+            <TotalDebit>0.00</TotalDebit>
+            <TotalCredit>1764.01</TotalCredit>
+            <Payment>
+                <PaymentRefNo>RC 2026/0001</PaymentRefNo>
+                <ATCUD>MNOP3456-1</ATCUD>
+                <Period>01</Period>
+                <TransactionID>RC 2026/0001</TransactionID>
+                <TransactionDate>2026-01-20</TransactionDate>
+                <PaymentType>RG</PaymentType>
+                <DocumentStatus>
+                    <PaymentStatus>N</PaymentStatus>
+                    <PaymentStatusDate>2026-01-20T10:00:00</PaymentStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourcePayment>P</SourcePayment>
+                </DocumentStatus>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-01-20T10:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <SourceDocumentID>
+                        <OriginatingON>FT 2026/0001</OriginatingON>
+                        <InvoiceDate>2026-01-08</InvoiceDate>
+                    </SourceDocumentID>
+                    <CreditAmount>600.86</CreditAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>600.86</NetTotal>
+                    <GrossTotal>600.86</GrossTotal>
+                </DocumentTotals>
+                <PaymentMethod>
+                    <PaymentMechanism>TB</PaymentMechanism>
+                    <PaymentAmount>600.86</PaymentAmount>
+                    <PaymentDate>2026-01-20</PaymentDate>
+                </PaymentMethod>
+            </Payment>
+            <Payment>
+                <PaymentRefNo>RC 2026/0002</PaymentRefNo>
+                <ATCUD>MNOP3456-2</ATCUD>
+                <Period>02</Period>
+                <TransactionID>RC 2026/0002</TransactionID>
+                <TransactionDate>2026-02-05</TransactionDate>
+                <PaymentType>RG</PaymentType>
+                <DocumentStatus>
+                    <PaymentStatus>N</PaymentStatus>
+                    <PaymentStatusDate>2026-02-05T11:30:00</PaymentStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourcePayment>P</SourcePayment>
+                </DocumentStatus>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-05T11:30:00</SystemEntryDate>
+                <CustomerID>C002</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <SourceDocumentID>
+                        <OriginatingON>FT 2026/0002</OriginatingON>
+                        <InvoiceDate>2026-01-15</InvoiceDate>
+                    </SourceDocumentID>
+                    <CreditAmount>563.15</CreditAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>563.15</NetTotal>
+                    <GrossTotal>563.15</GrossTotal>
+                </DocumentTotals>
+                <PaymentMethod>
+                    <PaymentMechanism>CC</PaymentMechanism>
+                    <PaymentAmount>563.15</PaymentAmount>
+                    <PaymentDate>2026-02-05</PaymentDate>
+                </PaymentMethod>
+            </Payment>
+            <Payment>
+                <PaymentRefNo>RC 2026/0003</PaymentRefNo>
+                <ATCUD>MNOP3456-3</ATCUD>
+                <Period>03</Period>
+                <TransactionID>RC 2026/0003</TransactionID>
+                <TransactionDate>2026-03-25</TransactionDate>
+                <PaymentType>RG</PaymentType>
+                <DocumentStatus>
+                    <PaymentStatus>N</PaymentStatus>
+                    <PaymentStatusDate>2026-03-25T14:00:00</PaymentStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourcePayment>P</SourcePayment>
+                </DocumentStatus>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-25T14:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <SourceDocumentID>
+                        <OriginatingON>FT 2026/0009</OriginatingON>
+                        <InvoiceDate>2026-03-18</InvoiceDate>
+                    </SourceDocumentID>
+                    <CreditAmount>600.00</CreditAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>0.00</TaxPayable>
+                    <NetTotal>600.00</NetTotal>
+                    <GrossTotal>600.00</GrossTotal>
+                </DocumentTotals>
+                <PaymentMethod>
+                    <PaymentMechanism>TB</PaymentMechanism>
+                    <PaymentAmount>600.00</PaymentAmount>
+                    <PaymentDate>2026-03-25</PaymentDate>
+                </PaymentMethod>
+            </Payment>
+        </Payments>
+        <MovementOfGoods>
+            <NumberOfEntries>2</NumberOfEntries>
+            <TotalQuantityIssued>180.00</TotalQuantityIssued>
+            <StockMovement>
+                <DocumentNumber>GT 2026/0001</DocumentNumber>
+                <ATCUD>GTMV5678-1</ATCUD>
+                <DocumentStatus>
+                    <MovementStatus>N</MovementStatus>
+                    <MovementStatusDate>2026-02-09T07:30:00</MovementStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>M</SourceBilling>
+                </DocumentStatus>
+                <Hash>gT1mV2sA3fT4pT5bI6lL7iN8gS9aM0p</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <MovementDate>2026-02-09</MovementDate>
+                <MovementType>GT</MovementType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-09T07:30:00</SystemEntryDate>
+                <CustomerID>C004</CustomerID>
+                <ShipTo>
+                    <DeliveryDate>2026-02-10</DeliveryDate>
+                    <Address>
+                        <AddressDetail>EN125, Km 34</AddressDetail>
+                        <City>Loule</City>
+                        <PostalCode>8100-200</PostalCode>
+                        <Country>PT</Country>
+                    </Address>
+                </ShipTo>
+                <ShipFrom>
+                    <DeliveryDate>2026-02-09</DeliveryDate>
+                    <Address>
+                        <AddressDetail>Rua Augusta 274, 2o Esq</AddressDetail>
+                        <City>Lisboa</City>
+                        <PostalCode>1100-053</PostalCode>
+                        <Country>PT</Country>
+                    </Address>
+                </ShipFrom>
+                <MovementStartTime>2026-02-09T08:00:00</MovementStartTime>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>100</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>11.80</UnitPrice>
+                    <CreditAmount>1180.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC003</ProductCode>
+                    <ProductDescription>Acucar branco 1kg</ProductDescription>
+                    <Quantity>200</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>0.95</UnitPrice>
+                    <CreditAmount>190.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>82.20</TaxPayable>
+                    <NetTotal>1370.00</NetTotal>
+                    <GrossTotal>1452.20</GrossTotal>
+                </DocumentTotals>
+            </StockMovement>
+            <StockMovement>
+                <DocumentNumber>GT 2026/0002</DocumentNumber>
+                <ATCUD>GTMV5678-2</ATCUD>
+                <DocumentStatus>
+                    <MovementStatus>N</MovementStatus>
+                    <MovementStatusDate>2026-03-17T09:00:00</MovementStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>M</SourceBilling>
+                </DocumentStatus>
+                <Hash>gT2mV3sA4fT5pT6bI7lL8iN9gS0aM1p</Hash>
+                <HashControl>1</HashControl>
+                <Period>03</Period>
+                <MovementDate>2026-03-17</MovementDate>
+                <MovementType>GT</MovementType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-03-17T09:00:00</SystemEntryDate>
+                <CustomerID>C003</CustomerID>
+                <ShipTo>
+                    <DeliveryDate>2026-03-18</DeliveryDate>
+                    <Address>
+                        <AddressDetail>Praca da Republica 5</AddressDetail>
+                        <City>Faro</City>
+                        <PostalCode>8000-078</PostalCode>
+                        <Country>PT</Country>
+                    </Address>
+                </ShipTo>
+                <ShipFrom>
+                    <DeliveryDate>2026-03-17</DeliveryDate>
+                    <Address>
+                        <AddressDetail>Rua Augusta 274, 2o Esq</AddressDetail>
+                        <City>Lisboa</City>
+                        <PostalCode>1100-053</PostalCode>
+                        <Country>PT</Country>
+                    </Address>
+                </ShipFrom>
+                <MovementStartTime>2026-03-17T09:30:00</MovementStartTime>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>30</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>555.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>72.15</TaxPayable>
+                    <NetTotal>555.00</NetTotal>
+                    <GrossTotal>627.15</GrossTotal>
+                </DocumentTotals>
+            </StockMovement>
+        </MovementOfGoods>
+        <WorkingDocuments>
+            <NumberOfEntries>3</NumberOfEntries>
+            <TotalDebit>0.00</TotalDebit>
+            <TotalCredit>2686.50</TotalCredit>
+            <WorkDocument>
+                <DocumentNumber>OR 2026/0001</DocumentNumber>
+                <ATCUD>ORCM9012-1</ATCUD>
+                <DocumentStatus>
+                    <WorkStatus>N</WorkStatus>
+                    <WorkStatusDate>2026-01-05T10:00:00</WorkStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>oR1cA2mE3nT4oD5eT6rA7bA8lH9oO0k</Hash>
+                <HashControl>1</HashControl>
+                <Period>01</Period>
+                <WorkDate>2026-01-05</WorkDate>
+                <WorkType>OR</WorkType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-01-05T10:00:00</SystemEntryDate>
+                <CustomerID>C001</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC001</ProductCode>
+                    <ProductDescription>Farinha de trigo T65 25kg</ProductDescription>
+                    <Quantity>20</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>12.50</UnitPrice>
+                    <CreditAmount>250.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>MERC002</ProductCode>
+                    <ProductDescription>Azeite virgem extra 5L</ProductDescription>
+                    <Quantity>10</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>24.90</UnitPrice>
+                    <CreditAmount>249.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>RED</TaxCode>
+                        <TaxPercentage>6</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>29.94</TaxPayable>
+                    <NetTotal>499.00</NetTotal>
+                    <GrossTotal>528.94</GrossTotal>
+                </DocumentTotals>
+            </WorkDocument>
+            <WorkDocument>
+                <DocumentNumber>PP 2026/0001</DocumentNumber>
+                <ATCUD>PPRF9012-1</ATCUD>
+                <DocumentStatus>
+                    <WorkStatus>N</WorkStatus>
+                    <WorkStatusDate>2026-02-18T14:30:00</WorkStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>pP1rO2fO3rM4aI5nV6oI7cE8sA9mP0l</Hash>
+                <HashControl>1</HashControl>
+                <Period>02</Period>
+                <WorkDate>2026-02-18</WorkDate>
+                <WorkType>PP</WorkType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-02-18T14:30:00</SystemEntryDate>
+                <CustomerID>C007</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>SRV001</ProductCode>
+                    <ProductDescription>Servico de consultoria alimentar</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>500.00</UnitPrice>
+                    <CreditAmount>500.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>115.00</TaxPayable>
+                    <NetTotal>500.00</NetTotal>
+                    <GrossTotal>615.00</GrossTotal>
+                </DocumentTotals>
+            </WorkDocument>
+            <WorkDocument>
+                <DocumentNumber>OR 2026/0002</DocumentNumber>
+                <ATCUD>ORCM9012-2</ATCUD>
+                <DocumentStatus>
+                    <WorkStatus>N</WorkStatus>
+                    <WorkStatusDate>2026-04-28T11:00:00</WorkStatusDate>
+                    <SourceID>admin</SourceID>
+                    <SourceBilling>P</SourceBilling>
+                </DocumentStatus>
+                <Hash>oR2cA3mE4nT5oD6eT7rA8bA9lH0oO1k</Hash>
+                <HashControl>1</HashControl>
+                <Period>04</Period>
+                <WorkDate>2026-04-28</WorkDate>
+                <WorkType>OR</WorkType>
+                <SourceID>admin</SourceID>
+                <SystemEntryDate>2026-04-28T11:00:00</SystemEntryDate>
+                <CustomerID>C002</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>MERC005</ProductCode>
+                    <ProductDescription>Cafe torrado em grao 1kg</ProductDescription>
+                    <Quantity>50</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>18.50</UnitPrice>
+                    <CreditAmount>925.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>INT</TaxCode>
+                        <TaxPercentage>13</TaxPercentage>
+                    </Tax>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>SRV002</ProductCode>
+                    <ProductDescription>Servico de entrega expresso</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>UN</UnitOfMeasure>
+                    <UnitPrice>15.00</UnitPrice>
+                    <CreditAmount>15.00</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>23</TaxPercentage>
+                    </Tax>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>123.70</TaxPayable>
+                    <NetTotal>940.00</NetTotal>
+                    <GrossTotal>1063.70</GrossTotal>
+                </DocumentTotals>
+            </WorkDocument>
+        </WorkingDocuments>
     </SourceDocuments>
 </AuditFile>
