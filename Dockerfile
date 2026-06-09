@@ -42,9 +42,8 @@ RUN if [ -f "package.json" ]; then \
 RUN mkdir -p /app/database && \
     touch /app/database/database.sqlite
 
-# Cache routes and views (NOT config — secrets unavailable at build time)
-RUN php artisan route:cache && \
-    php artisan view:cache
+# Cache views (Livewire assets served via routes, not published files)
+RUN php artisan view:cache
 
 ENTRYPOINT ["php", "artisan", "octane:frankenphp"]
 CMD ["--host=0.0.0.0", "--port=8080"]
