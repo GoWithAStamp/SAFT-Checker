@@ -1,58 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SAFT Checker
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**SAFT-PT file validator for Portuguese tax compliance.**
 
-## About Laravel
+Validate your SAF-T (PT) files — billing or accounting — against Portuguese tax rules. Upload an XML, get instant validation with detailed error reporting, and explore all data in searchable tables.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Live demo:** [saft-checker.fly.dev](https://saft-checker.fly.dev)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- **Tax validation** — Document sequence, digital signatures (ATCUD), NIF check digits, section totals, and line-level math verified automatically
+- **Billing & Accounting** — Supports both SAFT types: billing (invoices, payments, transport docs, working docs) and accounting (chart of accounts, journal entries, general ledger)
+- **Organised data** — Customers, products, invoices, payments, and ledger entries displayed in sortable, searchable tables
+- **Chart of Accounts comparison** — Upload your own chart of accounts (Excel or CSV) and compare it against the SAFT's `GeneralLedgerAccounts`
+- **Export** — Download any section as CSV or XML, or the entire file in one click
+- **Bilingual** — Full Portuguese and English interface
+- **Dark mode** — Light and dark themes
+- **Privacy-first** — Files are processed on the server and deleted immediately. No data is stored.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tech Stack
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **PHP 8.4** / **Laravel 13** / **Livewire 4**
+- **Tailwind CSS 4** with Apple Liquid Glass design
+- **FrankenPHP** + Laravel Octane (production)
+- **PhpSpreadsheet** for Excel/CSV parsing
+- **Fly.io** deployment
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Getting Started
 
-## Agentic Development
+### Requirements
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+- PHP 8.4+
+- Composer
+- Node.js 20+
+
+### Installation
 
 ```bash
-composer require laravel/boost --dev
+git clone https://github.com/GoWithAStamp/SAFT-Checker.git
+cd SAFT-Checker
 
-php artisan boost:install
+composer install
+npm install && npm run build
+
+cp .env.example .env
+php artisan key:generate
+
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Open [localhost:8000](http://localhost:8000).
 
-## Contributing
+### Docker
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+docker build -t saft-checker .
+docker run -p 8080:8080 \
+  -e APP_KEY=base64:$(openssl rand -base64 32) \
+  saft-checker
+```
 
-## Code of Conduct
+## Validation Rules
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+The validator checks against the **SAF-T (PT) v1.04_01** specification:
 
-## Security Vulnerabilities
+| Area | What's checked |
+|------|----------------|
+| **Header** | Required fields, NIF validity (mod-11), file version, date ranges, currency |
+| **Master Files** | Duplicate customers/products/suppliers, NIF validation, product types, VAT rates |
+| **Chart of Accounts** | SNC grouping categories (GR/GA/GM/AR/AA/AM), balance consistency, taxonomy codes |
+| **Sales Invoices** | Number format, ATCUD, sequence gaps, document totals, line math, tax exemptions, customer cross-reference |
+| **Payments** | Totals, status, invoice cross-references, date consistency |
+| **Working Documents** | Status, dates, GrossTotal = NetTotal + TaxPayable |
+| **Transport Documents** | Dates, origin/destination addresses |
+| **Ledger Entries** | Double-entry balance (debits = credits), account cross-reference, period consistency |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Project Structure
+
+```
+app/
+├── Http/Middleware/SetLocale.php    # Language switcher middleware
+├── Livewire/SaftUploader.php        # Main upload + results component
+└── Services/
+    ├── PlanoContasComparator.php     # Chart of accounts comparison
+    └── SaftValidator/
+        ├── SaftValidatorService.php  # Validation orchestrator
+        ├── SaftDataExtractor.php     # XML → structured arrays
+        ├── SaftExportService.php     # CSV/XML export
+        ├── ValidationResult.php      # Result value object
+        ├── ValidationError.php       # Error/warning/info value object
+        ├── Parsers/SaftParser.php    # XML parser with namespace support
+        └── Rules/
+            ├── BaseValidator.php     # Abstract base with NIF validation
+            ├── Header/
+            ├── MasterFiles/
+            └── SourceDocuments/
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT
