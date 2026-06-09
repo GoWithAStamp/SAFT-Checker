@@ -1,0 +1,44 @@
+# fly.toml app configuration file generated for saft-checker on 2026-06-09T12:24:47+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'saft-checker'
+primary_region = 'ams'
+console_command = 'php /app/artisan tinker'
+
+[build]
+  [build.args]
+    NODE_VERSION = '18'
+    PHP_VERSION = '8.3'
+
+[env]
+  APP_DEBUG = 'false'
+  APP_ENV = 'production'
+  CACHE_STORE = 'file'
+  DB_CONNECTION = 'sqlite'
+  DB_DATABASE = '/app/database/database.sqlite'
+  OCTANE_SERVER = 'frankenphp'
+  LOG_CHANNEL = 'stderr'
+  LOG_LEVEL = 'info'
+  LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
+  SESSION_DRIVER = 'cookie'
+  SESSION_SECURE_COOKIE = 'true'
+
+[[mounts]]
+  source = 'saft_data'
+  destination = '/app/database'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '256mb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 256
